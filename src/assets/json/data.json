@@ -1,0 +1,233 @@
+[
+    {
+      "code": "8103",
+      "name":"Leche uht",
+      "image": "https://qasiwp.pilandina.com.bo/siwp/products/F01076_200.jpg",
+      "products":[
+        {
+          "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+          },
+          "code": "F01119",
+          "name":"LECHE P. VIDA ENRIQ. UHTX900 ML. (BOLSA)",
+          "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+          "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+          },
+          "code": "532187",
+          "name":"PACK LECHES UHTX3 UND (NATURAL + LIGHT)",
+          "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+          "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+           },
+            "code": "F01092",
+            "name":"LECHE PIL UHT X 946 ML. P/PERSONAL",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01149",
+            "name":"LECHE FRESCA UHT x 946 ML.(SOBOCE)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "532188",
+            "name":"PACK LECHES UHTX3 UND (NATURAL + DESLAC)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01099",
+            "name":"LECHE NATURAL PROLECHE UHT X 800 ML(BOL)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01119",
+            "name":"LECHE P. VIDA ENRIQ. UHTX900 ML. (BOLSA)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01120",
+            "name":"LECHE PIL CREMOSA X 1 LT (CAJA)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01595",
+            "name":"LEP INST. PURA VIDAx350G (SACHET TRILAM)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01152",
+            "name":"LECHE PIL CREMOSA UHT 946 ML 3% (BOLSA)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01002",
+            "name":"LECHE PIL FRESCA NATURAL X 946 ML.",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            "code": "F01100",
+            "name":"LECHE PIL CREMOSA UHT 1.1 L. 3% (BOLSA)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810302",
+            "title":"Leche Saborizada UHT"
+            },
+            "code": "F01182",
+            "name":"LECHE CON CAFE X 800 ML.",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810302",
+            "title":"Leche Saborizada UHT"
+            },
+            "code": "F01117",
+            "name":"LECHE AVENA CHOCOLATE x 150 ML",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+        "family":{
+            "id":"810302",
+            "title":"Leche Saborizada UHT"
+            },
+            "code": "F01118",
+            "name":"LECHE P. VIDA CHOCO. UHTX800 ML. (BOLSA)",
+            "image":"http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+            "UBE": "20"
+        },
+        {
+          "family":{
+            "code":"810304",
+            "title":"Leche light"
+          },
+          "code": "F01151",
+          "name":"LECHE DESCREMADA PROTEPLUS X 800 ML",
+          "image":"http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+          "UBE": "1000 cc"
+        },
+        {
+          "family":{
+            "code":"810304",
+            "title":"Leche light"
+          },
+          "code": "F01121",
+          "name":"LECHE PIL LIGHT UHT X 1LT (CAJA)",
+          "image":"http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+          "UBE": "10"
+        }
+      ]
+    },
+    {
+      "code":"8101",
+      "name":"Leche Pasteurizada",
+      "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg",
+       "products":[
+        {
+          "family":{
+            "code":"810102",
+            "title":"Leche Saborizada"
+          },
+          "code": "F00515",
+          "name":"CHICOLAC X 800 ML. (BOLSA)",
+          "image":"http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+          "UBE": "1000 cc"
+        },
+        {
+          "family":{
+            "code":"810102",
+            "title":"Leche Saborizada"
+          },
+          "code": "F00514",
+          "name":"CHICOLAC X 80 ML. (BOLSA)",
+          "image":"http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+          "UBE": "10"
+        }
+        ]
+    },
+    {
+      "code":"8113",
+      "name":"Queso",
+      "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02501_200.jpg",
+      "products":[
+        {
+          "family":{
+            "code":"811314",
+            "title":"Queso Molde"
+          },
+          "code": "F02567",
+          "name":"QUESO PIL CHEDAR X 500 GR",
+          "image":"https://www.papajohnscdmx.com/wp-content/uploads/2014/10/coca-bebidas-300x320.jpg",
+          "UBE": "2"
+        },
+        {
+            "family":{
+              "code":"811314",
+              "title":"Queso Molde"
+            },
+            "code": "F02511",
+            "name":"QUESO PIL LIGHT X 1 KG",
+            "image":"https://www.papajohnscdmx.com/wp-content/uploads/2014/10/coca-bebidas-300x320.jpg",
+            "UBE": "2"
+          }
+        ]
+      }
+   ]

@@ -1,18 +1,33 @@
-<!--
-  Generated template for the LinesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>lines</ion-title>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar>
+  </ion-searchbar>
+  <ion-buttons right>
+    <button ion-button icon-only>
+      <ion-icon name="cart"></ion-icon>
+    </button>
+  </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-grid no-margin no-padding>
+    <ion-row no-margin no-padding>
+      <ion-col text-center col-6 *ngFor="let line of lines">
+        <a class="line-cover" (click)="goToProductsPage( line )">
+          <div class="cover">
+            <img [src]="line.image" [alt]="line.name">
+          </div>
+          <h5>{{ line.name }}</h5>
+          <p>{{ line.code }}</p>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

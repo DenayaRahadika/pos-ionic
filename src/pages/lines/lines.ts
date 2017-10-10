@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LinesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ProductsService } from '../../providers/products.service';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LinesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  lines: any[] = [];
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public productsService: ProductsService
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LinesPage');
+    this.getLines(); 
+  }
+
+  private getLines(){
+    this.productsService.getData().then(data=>{
+      for(const cod in data){
+        this.lines.push(data[cod]);
+      }
+    });
+  }
+
+  goToProductsPage( line ){
+    this.navCtrl.push('FamilyPage',{
+      code: line.code
+    });
   }
 
 }
