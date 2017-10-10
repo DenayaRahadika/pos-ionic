@@ -1,0 +1,26 @@
+<ion-split-pane>
+<ion-menu id="menu" [content]="content">
+  <ion-content>
+    <div class="profile primary">
+      <div class="cover">
+      <img class="photo"  src="https://lh4.googleusercontent.com/-Nw4FOntSxsg/AAAAAAAAAAI/AAAAAAAAAAA/Vjk18JeCth4/s128-c-k/photo.jpg" alt="logo">
+    </div>
+    <p>Zulema Vicente Paca</p>
+    <p>codigo: 8669998</p>
+  </div>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon [name]="p.icon" item-left></ion-icon>
+        {{p.title}}
+      </button>
+      <button menuClose ion-item (click)="logout()">
+        <ion-icon name="log-out" item-left></ion-icon>
+          Salir
+        </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content main></ion-nav>
+</ion-split-pane>
