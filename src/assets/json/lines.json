@@ -1,0 +1,86 @@
+[
+    {
+      "code": "8103",
+      "name":"Leche uht",
+      "image": "https://qasiwp.pilandina.com.bo/siwp/products/F01076_200.jpg",
+      "family":[{
+            "id":"810301",
+            "title":"Leche Natural UHT"
+            },
+            {
+            "id":"810302",
+            "title":"Leche Saborizada UHT"
+            },
+            {
+            "id":"810303",
+            "title":"Leche Deslactosada"
+            },
+            {
+            "id":"810304",
+            "title":"Leche Light"
+            }
+        ]
+    },
+    {
+        "code":"8101",
+        "name":"Leche Pasteurizada",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg",
+        "family":[{
+            "code":"810102",
+            "title":"Leche Saborizada"
+           }]
+    },
+    {
+        "code":"8105",
+        "name":"Leche En Polvo",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg",
+        "family":[{
+            "code":"810505",
+            "title":"Leche en Polvo Entera"
+            },
+            {
+            "code":"810506",
+            "title":"Leche en Polvo Semidescremada"
+            },
+            {
+            "code":"810507",
+            "title":"Leche en Polvo Saborizada"
+            }
+          ]
+    },
+    {
+        "code":"8113",
+        "name":"Queso",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02501_200.jpg",
+        "family":[{
+            "code":"811314",
+            "title":"Queso Molde"
+            },
+            {
+            "code":"811315",
+            "title":"Queso Untar"
+            }]
+    },
+    {
+        "code":"8123",
+        "name":"Jugo",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F04005_200.jpg",
+        
+          "family":[{
+            "code":"812320",
+            "title":"Jugo Saborizado"
+            },
+            {
+            "code":"812321",
+            "title":"Jugo Natural"
+            },
+            {
+            "code":"812340",
+            "title":"Jugo Saborizado Splash"
+            },
+            {
+            "code":"812340",
+            "title":"Jugo Saborizado Aruba"
+            }]
+    }  
+]

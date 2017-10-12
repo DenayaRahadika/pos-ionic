@@ -17,25 +17,28 @@ export class FamilyPage {
     public navParams: NavParams,
     public productsService: ProductsService
   ) {
-    this.code = this.navParams.get('code');
+    this.code = this.navParams.get('familyCode');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FamilyPage');
-    console.log(this.code);
     this.getFamily();
   }
 
   private getFamily(){
-    this.productsService.getData().then(data=>{
+    this.productsService.getLines().then(data=>{
       for(const cod in data){
-        console.log(data[cod]);
         if(data[cod].code == this.code){
-          this.families = data[cod].products;
+          this.families = data[cod].family;
+          
         }
       }
       console.log(this.families);
     })
+  }
+
+  private obtenerProductos(){
+
   }
 
 }

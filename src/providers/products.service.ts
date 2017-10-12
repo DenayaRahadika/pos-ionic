@@ -13,7 +13,13 @@ export class ProductsService {
   }
   
   getData(){
-    return this.http.get('assets/json/data.json')
+    return this.http.get('assets/json/lines.json')
+    .map(response => response.json())
+    .toPromise();
+  }
+
+  getLines(){
+    return this.http.get('assets/json/lines.json')
     .map(response => response.json())
     .toPromise();
   }
@@ -24,4 +30,10 @@ export class ProductsService {
     .toPromise();
   }
 
+  getSucursal()
+  {
+    return this.http.get('assets/json/sucursal.json')
+    .map(response => response.json())
+    .toPromise();
+  }
 }

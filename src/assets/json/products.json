@@ -1,0 +1,27 @@
+[
+    {
+      "code": "8103",
+      "name":"Leche uht",
+      "image": "https://qasiwp.pilandina.com.bo/siwp/products/F01076_200.jpg"
+    },
+    {
+        "code":"8101",
+        "name":"Leche Pasteurizada",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg"
+    },
+    {
+        "code":"8105",
+        "name":"Leche En Polvo",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg"
+    },
+    {
+        "code":"8113",
+        "name":"Queso",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02501_200.jpg"
+    },
+    {
+        "code":"8123",
+        "name":"Jugo",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02501_200.jpg"
+    }  
+]

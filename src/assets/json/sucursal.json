@@ -1,0 +1,26 @@
+[
+    {
+        "idSucursal":"1",
+        "name": "Feria CBA FEICOBOL" 
+    },
+    {
+        "idSucursal":"2",
+        "name": "Sarco CBA"
+    },
+    {
+        "idSucursal":"3",
+        "name": "Ag. Junin CBA"
+    },
+    {
+        "idSucursal":"4",
+        "name": "Micromercado CBA"
+    },
+    {
+        "idSucursal":"5",
+        "name": "Kiosko CBA"
+    },
+    {
+        "idSucursal":"6",
+        "name": "Agencia Coroico"
+    }
+]
