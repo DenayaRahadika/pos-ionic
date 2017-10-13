@@ -9,9 +9,8 @@ import { ProductsService } from '../../providers/products.service';
 })
 export class LinesPage {
   
-  testRadioOpen: any;
-  testRadioResult: any;
   lines: any[] = [];
+  linesShow: any[] = [];
 
   constructor(
     public navCtrl: NavController, 
@@ -30,7 +29,7 @@ export class LinesPage {
     this.productsService.getSucursal()
     .then(sucursal=>{
       let alert = this.alertCtrl.create();
-      alert.setTitle('Elige Sucursal');
+      alert.setTitle('Sucursal');
       sucursal.forEach(element => {
         console.log(element);
         alert.addInput({
@@ -40,17 +39,19 @@ export class LinesPage {
           checked: false
         });
     });
-    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Cancel',
+      handler: data => {
+        console.log('cancel', data);
+      }
+    });
     alert.addButton({
       text: 'OK',
       handler: data => {
-        console.log(data);
-        this.testRadioOpen = false;
-        this.testRadioResult = data;
+        console.log('ok', data);
       }
     });
     alert.present();
-    console.log(this.testRadioResult);
   })
       this.getLines(); 
   }
@@ -60,6 +61,7 @@ export class LinesPage {
       for(const cod in data){
         this.lines.push(data[cod]);
       }
+      this.linesShow = this.lines;
     });
   }
 
@@ -67,6 +69,17 @@ export class LinesPage {
     this.navCtrl.push('FamilyPage',{
       familyCode: line.code
     });
+  }
+
+  search(event: any){
+    if(event.target && event.target.value){
+      let query = event.target.value.trim();
+       this.linesShow = this.lines.filter(item => {
+        return item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+      });
+    }else{
+      this.linesShow = this.lines;
+    }
   }
 
 }

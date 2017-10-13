@@ -13,11 +13,11 @@ export class ProductsService {
   }
   
   getData(){
-    return this.http.get('assets/json/lines.json')
+    return this.http.get('assets/json/data.json')
     .map(response => response.json())
     .toPromise();
   }
-
+  
   getLines(){
     return this.http.get('assets/json/lines.json')
     .map(response => response.json())

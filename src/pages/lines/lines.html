@@ -5,21 +5,21 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-searchbar>
-  </ion-searchbar>
+    <ion-searchbar debounce="400" showCancelButton="true" (input)="search($event)"></ion-searchbar>
   <ion-buttons right>
     <button ion-button icon-only>
       <ion-icon name="cart"></ion-icon>
     </button>
   </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
 
 <ion-content padding>
   <ion-grid no-margin no-padding>
     <ion-row no-margin no-padding>
-      <ion-col text-center col-6 *ngFor="let line of lines">
+      <ion-col text-center col-6 *ngFor="let line of linesShow">
         <a class="line-cover" (click)="goToProductsPage( line )">
           <div class="cover">
             <img [src]="line.image" [alt]="line.name">
