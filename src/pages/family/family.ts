@@ -26,6 +26,12 @@ export class FamilyPage {
     this.getFamily();
   }
 
+  goToProductsPage( family ){
+    this.navCtrl.push('ProductsPage',{
+      familyCode: family.code
+    });
+  }
+
   private getFamily(){
     this.productsService.getLines().then(data=>{
       for(const cod in data){

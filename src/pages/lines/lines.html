@@ -9,6 +9,7 @@
   <ion-buttons right>
     <button ion-button icon-only>
       <ion-icon name="cart"></ion-icon>
+      <ion-badge item-end class="badge">8</ion-badge>
     </button>
   </ion-buttons>
   </ion-navbar>
@@ -20,7 +21,7 @@
   <ion-grid no-margin no-padding>
     <ion-row no-margin no-padding>
       <ion-col text-center col-6 *ngFor="let line of linesShow">
-        <a class="line-cover" (click)="goToProductsPage( line )">
+        <a class="line-cover" (click)="goToFamilyPage( line )">
           <div class="cover">
             <img [src]="line.image" [alt]="line.name">
           </div>

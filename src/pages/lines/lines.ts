@@ -65,7 +65,7 @@ export class LinesPage {
     });
   }
 
-  goToProductsPage( line ){
+  goToFamilyPage( line ){
     this.navCtrl.push('FamilyPage',{
       familyCode: line.code
     });
