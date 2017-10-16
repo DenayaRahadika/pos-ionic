@@ -39,6 +39,10 @@ page-products {
                   color: color($colors, dark);
                   font-size: 1.5rem;
                 }
+                p{
+                  max-height: 18px;
+                  margin-top: -10px;
+                }
                 ion-icon{
                 opacity: 0;
                 position: absolute;

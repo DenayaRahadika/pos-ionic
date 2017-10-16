@@ -89,8 +89,7 @@ export class ProductsPage {
 
   showOrder(){
     let modal = this.modalCtrl.create('OrderPage',{
-      order: this.productsOrder,
-      state: 'init'
+      order: this.productsOrder
     });
     modal.present();
   }

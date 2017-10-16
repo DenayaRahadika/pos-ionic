@@ -36,7 +36,7 @@ export class LoginPage {
     const usuario = this.loginForm.value.usuario;
     const password = this.loginForm.value.password;
     console.log(usuario, password);
-    this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot('HomePage'); 
   }
 
 

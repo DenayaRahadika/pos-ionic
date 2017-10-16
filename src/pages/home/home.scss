@@ -7,9 +7,19 @@ page-home {
         margin-left: -8px;
         background-color: red;
     }
+
     ion-content{
-    .title{
         text-align: center; 
+        ion-card {
+            position: relative;
+            text-align: center;
+            img{
+                height: 100px; 
+                width: 100px;
+                position: inherit;
+                margin-left: 90px;
+              }
+          }
     }
-  }
+
 }

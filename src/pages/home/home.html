@@ -11,7 +11,7 @@
     <button ion-button icon-only>
       <ion-icon name="cart"></ion-icon>
       <ion-badge item-end class="badge">3</ion-badge>
-      <ion-badge *ngIf="productsOrder.length != 0" item-end class="badge" >{{ productsOrder.length }}</ion-badge>
+      <!-- <ion-badge *ngIf="productsOrder.length != 0" item-end class="badge" >{{ productsOrder.length }}</ion-badge> -->
     </button>
   </ion-buttons>
   </ion-navbar>
@@ -19,4 +19,16 @@
 
 <ion-content padding>
   <h3 class="title">NOTICIAS</h3>
+  <ion-card>
+      <img src="assets/imgs/F01119_200.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
