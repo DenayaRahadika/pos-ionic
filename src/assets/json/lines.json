@@ -54,7 +54,7 @@
         "name":"Leche Pasteurizada",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F06562_200.jpg",
         "family":[{
-            "code":"810102",
+            "id":"810102",
             "title":"Leche Saborizada"
            }]
     },
@@ -63,15 +63,15 @@
         "name":"Yogurt",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02093_200.jpg",
         "family":[{
-            "code":"810909",
+            "id":"810909",
             "title":"Yogurt Bebible"
             },
             {
-            "code":"810910",
+            "id":"810910",
             "title":"Yogurt Frutado"
             },
             {
-            "code":"810911",
+            "id":"810911",
             "title":"Yogurt Light"
             }
           ]
@@ -81,11 +81,11 @@
         "name":"Mantequilla",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F03006_200.jpg",
         "family":[{
-            "code":"811112",
+            "id":"811112",
             "title":"Mantequilla con Sal"
             },
             {
-            "code":"811113",
+            "id":"811113",
             "title":"Mantequilla sin Sal"
             }
           ]
@@ -95,11 +95,11 @@
         "name":"Queso",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F02501_200.jpg",
         "family":[{
-            "code":"811314",
+            "id":"811314",
             "title":"Queso Molde"
             },
             {
-            "code":"811315",
+            "id":"811315",
             "title":"Queso Untar"
             }]
     },
@@ -108,7 +108,7 @@
         "name":"Leche Condensada",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F03516_200.jpg",
         "family":[{
-            "code":"811516",
+            "id":"811516",
             "title":"Leche Condensada"
             }]
     },
@@ -117,7 +117,7 @@
         "name":"Crema De Leche",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F03501_200.jpg",
         "family":[{
-            "code":"811717",
+            "id":"811717",
             "title":"Crema de Leche"
             }]
     },
@@ -126,7 +126,7 @@
         "name":"Dulce de Leche",
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F03507_200.jpg",
         "family":[{
-            "code":"811918",
+            "id":"811918",
             "title":"Dulce de Leche"
             }]
     },
@@ -136,19 +136,19 @@
         "image": "https://qasiwp.pilandina.com.bo/siwp/products/F04005_200.jpg",
         
           "family":[{
-            "code":"812320",
+            "id":"812320",
             "title":"Jugo Saborizado"
             },
             {
-            "code":"812321",
+            "id":"812321",
             "title":"Jugo Natural"
             },
             {
-            "code":"812340",
+            "id":"812340",
             "title":"Jugo Saborizado Splash"
             },
             {
-            "code":"812340",
+            "id":"812340",
             "title":"Jugo Saborizado Aruba"
             }]
     }  

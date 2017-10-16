@@ -1,18 +1,38 @@
 <ion-header>
     <ion-navbar color="primary">
-      <ion-buttons left>
-        <button ion-button icon-only menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      </ion-buttons>
       <ion-title class="title">LISTA PEDIDOS</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only>
-        <ion-icon name="cart"></ion-icon>
-      </button>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="close()">
+            <ion-icon name="close"></ion-icon>
+          </button>
     </ion-buttons>
     </ion-navbar>
   </ion-header>
   
-  <ion-content padding>
+  <ion-content>
+          <ion-card>
+              <!-- <ion-item>
+                <ion-avatar item-left>
+                  <img [src]="user.photo">
+                </ion-avatar>
+                <h2>{{ user.name }} {{ user.apPat}}</h2>
+                <p>Dirección: {{ user.direction }}</p>
+                <p>Código: {{ user.codClient }}</p>
+              </ion-item> -->
+              <ion-list>
+                <ion-item *ngIf="orders.length == 0">
+                  No hay productos agregados
+                </ion-item>
+                <ion-item *ngFor="let order of orders; let i = index ">
+                  <ion-thumbnail item-left>
+                    <img [src]="order.image">
+                  </ion-thumbnail>
+                  <h2>{{order.name}}</h2>
+                  <p>Cantidad {{order.count}}</p>
+                  <button ion-button clear color="danger" item-right (click)="delete( order, i )">
+                    Eliminar
+                  </button>
+                </ion-item>
+              </ion-list>
+            </ion-card>
   </ion-content>

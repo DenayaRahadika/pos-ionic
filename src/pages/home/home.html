@@ -10,7 +10,8 @@
   <ion-buttons right>
     <button ion-button icon-only>
       <ion-icon name="cart"></ion-icon>
-      <ion-badge item-end class="badge">8</ion-badge>
+      <ion-badge item-end class="badge">3</ion-badge>
+      <ion-badge *ngIf="productsOrder.length != 0" item-end class="badge" >{{ productsOrder.length }}</ion-badge>
     </button>
   </ion-buttons>
   </ion-navbar>

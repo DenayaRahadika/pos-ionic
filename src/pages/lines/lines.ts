@@ -67,7 +67,7 @@ export class LinesPage {
 
   goToFamilyPage( line ){
     this.navCtrl.push('FamilyPage',{
-      familyCode: line.code
+      lineaCode: line.code
     });
   }
 

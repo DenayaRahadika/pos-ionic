@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { ProductsService } from '../../providers/products.service';
 
-@IonicPage()
+@IonicPage({
+  name: 'FamilyPage',
+  segment: 'family/:lineaCode'
+})
+
 @Component({
   selector: 'page-family',
   templateUrl: 'family.html',
@@ -18,7 +22,7 @@ export class FamilyPage {
     public productsService: ProductsService,
     public modalCtrl: ModalController,
   ) {
-    this.code = this.navParams.get('familyCode');
+    this.code = this.navParams.get('lineaCode');
   }
 
   ionViewDidLoad() {
@@ -27,8 +31,9 @@ export class FamilyPage {
   }
 
   goToProductsPage( family ){
+    console.log(family.id);
     this.navCtrl.push('ProductsPage',{
-      familyCode: family.code
+      familyCode: family.id
     });
   }
 
@@ -36,20 +41,8 @@ export class FamilyPage {
     this.productsService.getLines().then(data=>{
       for(const cod in data){
         if(data[cod].code == this.code){
-          console.log(data[cod].family);
           this.families = data[cod].family;
-          this.obtenerProductos(data[cod].family);
         }
-      }
-    })
-  }
-
-  private obtenerProductos(codFamily){
-    this.productsService.getFamily()
-    .then(data=>{
-      console.log(data);
-      for(const cod in data){
-        this.families = data[0].products;
       }
       console.log(this.families);
     })

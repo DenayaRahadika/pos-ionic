@@ -1,4 +1,12 @@
 page-family {
+  .badge-md {
+    border-radius: 10px;
+    color: #fff;
+    margin-top: -25px;
+    margin-right: -5px;
+    margin-left: -8px;
+    background-color: red;
+}
     ion-grid{
         ion-col{
           .family-cover{
@@ -13,7 +21,7 @@ page-family {
               &:after{
                 position: absolute;
                 content: '';
-                display: block;
+                // display: block;
                 border-radius: 100%;
                 height: 5px;
                 width: 70%;
@@ -31,15 +39,20 @@ page-family {
               color: color($colors, dark);
               font-size: 1.5rem;
             }
+
+            p{
+              padding: 0px;
+            }
+            
           }
           &:nth-child(odd) {
-            .category-cover{
+            .family-cover{
               border:1px solid #ccc;
               border-width: 0px .5px .5px 0px;
             }
           }
           &:nth-child(even) {
-            .category-cover{
+            .family-cover{
               border:1px solid #ccc;
               border-width: 0px 0px .5px .5px;
             }

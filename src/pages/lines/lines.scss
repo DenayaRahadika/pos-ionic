@@ -41,13 +41,13 @@ page-lines {
             }
           }
           &:nth-child(odd) {
-            .category-cover{
+            .line-cover{
               border:1px solid #ccc;
               border-width: 0px .5px .5px 0px;
             }
           }
           &:nth-child(even) {
-            .category-cover{
+            .line-cover{
               border:1px solid #ccc;
               border-width: 0px 0px .5px .5px;
             }

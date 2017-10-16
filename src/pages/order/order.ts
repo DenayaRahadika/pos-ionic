@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,19 +8,27 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class OrderPage {
 
+  orders: any[] = [];
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public menuCtrl: MenuController
+    private viewCtrl: ViewController,
   ) {
+    this.orders = this.navParams.get('order');
+    console.log(this.orders);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OrderPage');
   }
 
-  ionViewDidEnter() {
-    this.menuCtrl.enable(true, 'menu');
+  close(){
+    return this.viewCtrl.dismiss();
+  }
+
+  delete( product, i ){
+    this.orders.splice( i, 1 );
   }
 
 }
