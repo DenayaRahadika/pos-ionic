@@ -62,7 +62,7 @@ export class ProductsPage {
   }
 
   add(){
-    console.log("add", this.productSelected.cant);
+    console.log("add", this.productSelected.count);
     this.productSelected.count++;
   }
 

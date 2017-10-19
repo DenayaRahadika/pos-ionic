@@ -17,8 +17,5 @@ export class ClientsService {
     .map(response => response.json())
     .toPromise();
   }
-  getUser(user, password){
-    
-  }
 
 }

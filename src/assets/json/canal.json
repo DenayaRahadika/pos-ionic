@@ -1,0 +1,66 @@
+[
+    {
+      "IDCanal": "1",
+      "IDSucursal":"1",
+      "Nombre": "Minoristas",
+      "Descripcion": "Minoristas 51",
+      "canal": 51,
+      "usuarioID": "admin"
+    },
+    {
+      "IDCanal": "1",
+      "IDSucursal":"1",
+      "Nombre": "Minoristas",
+      "Descripcion": "Minoristas 51",
+      "canal": 51,
+      "usuarioID": "admin"
+    },
+    {
+      "IDCanal": "2",
+      "IDSucursal":"2",
+      "Nombre": "Minoristas",
+      "Descripcion": "Minoristas 05",
+      "canal": 5,
+      "usuarioID": "admin"
+    },
+    {
+       "IDCanal": "3",
+       "IDSucursal":"2",
+       "Nombre": "Ventas al personal",
+       "Descripcion": "Ventas al personal 65",
+       "canal": 65,
+       "usuarioID": "admin"
+    },
+    {
+      "IDCanal": "4",
+      "IDSucursal":"3",
+      "Nombre": "Minoristas",
+      "Descripcion": "Minoristas 05",
+      "canal": 5,
+      "usuarioID": "admin"
+    },
+    {
+       "IDCanal": "5",
+       "IDSucursal":"3",
+       "Nombre": "Ventas al personal",
+       "Descripcion": "Ventas al personal 65",
+       "canal": 65,
+       "usuarioID": "admin"
+    },
+    {
+        "IDCanal": "6",
+        "IDSucursal":"4",
+        "Nombre": "Instituciones",
+        "Descripcion": "Instituciones 51",
+        "canal": 51,
+        "usuarioID": "admin"
+     },
+     {
+        "IDCanal": "7",
+        "IDSucursal":"4",
+        "Nombre": "Ventas al personal",
+        "Descripcion": "Ventas al personal 65",
+        "canal": 65,
+        "usuarioID": "admin"
+     }
+]

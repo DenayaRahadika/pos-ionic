@@ -20,7 +20,7 @@
 <ion-content padding>
   <ion-grid no-margin no-padding>
     <ion-row no-margin no-padding>
-      <ion-col text-center col-6 *ngFor="let line of linesShow">
+      <ion-col text-center col-6 *ngFor="let line of linesShow" col-md-3>
         <a class="line-cover" (click)="goToFamilyPage( line )">
           <div class="cover">
             <img [src]="line.image" [alt]="line.name">

@@ -151,5 +151,23 @@
             "id":"812340",
             "title":"Jugo Saborizado Aruba"
             }]
+    },
+    {
+        "code":"8190",
+        "name":"Mercaderias",
+        "image": "https://qasiwp.pilandina.com.bo/siwp/products/529902_200.jpg",
+        
+          "family":[{
+            "id":"819046",
+            "title":"Duraznos al Jugo"
+            },
+            {
+            "id":"819048",
+            "title":"Cafe Instantaneo"
+            },
+            {
+            "id":"819052",
+            "title":"Conservas de Pescado"
+            }]
     }  
 ]

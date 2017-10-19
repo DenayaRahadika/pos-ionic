@@ -1,26 +1,32 @@
 [
     {
         "idSucursal":"1",
-        "name": "Feria CBA FEICOBOL" 
+        "name": "Feria CBA FEICOBOL",
+        "canales": [1,43,42,38,37]
     },
     {
         "idSucursal":"2",
-        "name": "Sarco CBA"
+        "name": "Sarco CBA",
+        "canales": [27,3,2, 52]
     },
     {
         "idSucursal":"3",
-        "name": "Ag. Junin CBA"
+        "name": "Ag. Junin CBA",
+        "canales":[33,51,4,5]
     },
     {
         "idSucursal":"4",
-        "name": "Micromercado CBA"
+        "name": "Micromercado CBA",
+        "canales":[7,6]
     },
     {
         "idSucursal":"5",
-        "name": "Kiosko CBA"
+        "name": "Kiosko CBA",
+        "canales":[8,32,64,50]
     },
     {
         "idSucursal":"6",
-        "name": "Agencia Coroico"
+        "name": "Agencia Coroico",
+        "canales":[36,48,9,10]
     }
 ]
