@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProductsService } from '../providers/products.service';
 import { ClientsService } from '../providers/clients.service';
+import { OrdersService } from '../providers/orders.service';
 
 import { HttpModule } from '@angular/http';
 import { AuthProvider } from '../providers/auth.service';
@@ -45,7 +46,8 @@ const configFirebase = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductsService,
     ClientsService,
-    AuthProvider 
+    AuthProvider,
+    OrdersService 
   ]
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClientsService } from '../../providers/clients.service';
@@ -18,7 +18,8 @@ export class LoginPage {
     public navParams: NavParams,
     public menuCtrl: MenuController,
     public formBuilder: FormBuilder,
-    public clientsService: ClientsService
+    public clientsService: ClientsService,
+    public alertCtrl: AlertController
   ) {
     this.loginForm = this.makeLoginForm();
   }
@@ -35,14 +36,26 @@ export class LoginPage {
     event.preventDefault();
     const usuario = this.loginForm.value.usuario;
     const password = this.loginForm.value.password;
-    console.log(usuario, password);
-      this.navCtrl.setRoot('HomePage'); 
+    if(usuario == "zule" && password == "123456"){
+      console.log(usuario, password);
+      this.navCtrl.setRoot('HomePage', {
+        user: usuario
+      }); 
+    }else{
+      const alert = this.alertCtrl.create({
+        title: 'Datos Invalidos',
+        subTitle: 'Revise sus datos',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+    
   }
 
 
   private makeLoginForm() {
     return this.formBuilder.group({
-      usuario: ['', [Validators.required, Validators.minLength(6)]],
+      usuario: ['', [Validators.required, Validators.minLength(4)]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }

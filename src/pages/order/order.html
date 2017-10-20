@@ -20,19 +20,26 @@
                 <p>Código: {{ user.codClient }}</p>
               </ion-item> -->
               <ion-list>
-                <ion-item *ngIf="orders.length == 0">
+                <ion-item *ngIf="products.length == 0">
                   No hay productos agregados
                 </ion-item>
-                <ion-item *ngFor="let order of orders; let i = index ">
+                <ion-item *ngFor="let product of products; let i = index ">
                   <ion-thumbnail item-left>
-                    <img [src]="order.image">
+                    <img [src]="product.image">
                   </ion-thumbnail>
-                  <h2>{{order.name}}</h2>
-                  <p>Cantidad {{order.count}}</p>
-                  <button ion-button clear color="danger" item-right (click)="delete( order, i )">
-                    Eliminar
+                  <h2>{{product.name}}</h2>
+                  <p>Precio: <b>{{ product.precio}} bs. </b> </p> 
+                  <p>Cantidad: <b> {{product.count}} </b> </p>  
+                  <p> <b>Bs.{{product.count * product.precio}} </b></p>
+                  <button class="icon" ion-button clear item-right icon-only (click)="delete( product, i )">
+                    <ion-icon color="danger" name="ios-trash-outline"></ion-icon> 
                   </button>
                 </ion-item>
               </ion-list>
             </ion-card>
   </ion-content>
+  <ion-footer padding>
+    <button block ion-button color="primary" (click)="addOrder()">
+      (Bs {{ total }}) Finalizar pedido
+    </button>
+  </ion-footer>

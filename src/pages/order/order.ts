@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
+import { OrdersService } from '../../providers/orders.service';
+import { Observable } from 'rxjs/Observable';
+
 @IonicPage()
 @Component({
   selector: 'page-order',
@@ -8,19 +11,27 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class OrderPage {
 
-  orders: any[] = [];
+  products: any[] = [];
+  total: number = 0;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private viewCtrl: ViewController,
+    private orderService: OrdersService
   ) {
-    this.orders = this.navParams.get('order');
-    console.log(this.orders);
+    this.products = this.navParams.get('order');
+    console.log(this.products);
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OrderPage');
+    this.getProducts();
+  }
+
+  addOrder(){
+    this.orderService.addOrder(this.products);
   }
 
   close(){
@@ -28,7 +39,16 @@ export class OrderPage {
   }
 
   delete( product, i ){
-    this.orders.splice( i, 1 );
+    this.products.splice( i, 1 );
+  }
+
+  private getProducts(){
+      let total = 0;
+      this.products.forEach((item)=>{
+        total+= item.precio * item.count
+        console.log(item);
+      });
+      this.total = total;
   }
 
 }

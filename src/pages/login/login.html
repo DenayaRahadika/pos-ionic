@@ -21,7 +21,7 @@
           <ion-input formControlName="usuario"></ion-input>
           <ion-item *ngIf="loginForm.get('usuario').errors && loginForm.get('usuario').dirty">
               <p *ngIf="loginForm.get('usuario').hasError('required')" ion-text color="danger">Este campo es requerido.</p>
-              <p *ngIf="loginForm.get('usuario').hasError('minlength')" ion-text color="danger">Minimo tiene que ser de 6 caracteres.</p>
+              <p *ngIf="loginForm.get('usuario').hasError('minlength')" ion-text color="danger">tiene que ser de 4 caracteres.</p>
             </ion-item>
         </ion-item>
         <ion-item>
