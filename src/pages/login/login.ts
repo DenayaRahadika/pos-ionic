@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams, MenuController, AlertController } 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClientsService } from '../../providers/clients.service';
 
+import { Storage } from '@ionic/storage';
+
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -19,7 +21,8 @@ export class LoginPage {
     public menuCtrl: MenuController,
     public formBuilder: FormBuilder,
     public clientsService: ClientsService,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    private storage: Storage
   ) {
     this.loginForm = this.makeLoginForm();
   }
@@ -38,6 +41,8 @@ export class LoginPage {
     const password = this.loginForm.value.password;
     if(usuario == "zule" && password == "123456"){
       console.log(usuario, password);
+      const user = JSON.stringify(usuario);
+      this.storage.set('user', user);
       this.navCtrl.setRoot('HomePage', {
         user: usuario
       }); 

@@ -16,6 +16,8 @@ import { AuthProvider } from '../providers/auth.service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 const configFirebase = {
   apiKey: "AIzaSyCNpCgHH43amuKWOSeE2VciLO_dTTAgY_4",
   authDomain: "storeexpress-96317.firebaseapp.com",
@@ -32,6 +34,10 @@ const configFirebase = {
   imports: [
     BrowserModule,
     HttpModule,
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp( configFirebase ),
     AngularFireDatabaseModule,

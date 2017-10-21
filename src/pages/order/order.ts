@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 import { OrdersService } from '../../providers/orders.service';
-import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -27,7 +26,12 @@ export class OrderPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OrderPage');
+    this.getClient();
     this.getProducts();
+  }
+
+  private getClient(){
+    
   }
 
   addOrder(){

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title class="title">Lista Pedido</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  <ion-buttons right>
+    <button ion-button icon-only>
+      <ion-icon name="cart"></ion-icon>
+      <ion-badge item-end class="badge">3</ion-badge>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-list>
+          <ion-item *ngIf="orders.length == 0">
+            No hay productos agregados
+          </ion-item>
+          <ion-item *ngFor="let order of orders; let i = index ">
+            <ion-thumbnail item-left>
+              <img [src]="order.image">
+            </ion-thumbnail>
+            <h2>{{order.name}}</h2>
+            <p>Precio: <b>{{ order.precio}} bs. </b> </p> 
+            <p>Cantidad: <b> {{order.count}} </b> </p>  
+            <p> <b>Bs.{{order.count * order.precio}} </b></p>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+</ion-content>
+<ion-footer padding>
+    <button block ion-button color="primary" (click)="addOrder()">
+      Total: (Bs {{ total }})
+    </button>
+  </ion-footer>

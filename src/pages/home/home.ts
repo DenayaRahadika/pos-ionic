@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, MenuController, NavParams } from 'ionic-angular';
 
 import { OrdersService } from '../../providers/orders.service';
-@IonicPage()
+
+@IonicPage({
+  name: 'HomePage',
+  segment: 'home/:user'
+})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -30,7 +34,7 @@ export class HomePage {
   }
 
   private getOrder(){
-    this.orderService.getOrder(this.user);
+    // this.orderService.getOrder(this.user);
   }
 
 }
