@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Tarjeta credito</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-8>
+            <p>DATOS DE PAGO: Obligatorios (*)</p>
+          </ion-col>
+          <ion-col col-2>
+          <img src="assets/imgs/logos/mastercard.png" alt="">
+          </ion-col>
+          <ion-col col-2>
+          <img src="assets/imgs/logos/visa.png" alt="">
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  <form [formGroup]="creditoForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>Numero de la tarjeta*:</ion-label>
+              <ion-input type="number" formControlName="num"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="creditoForm.get('num').errors && creditoForm.get('num').dirty">
+                <p *ngIf="creditoForm.get('num').hasError('required')" ion-text color="danger">Requerido.</p>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Fecha de vencimiento*:</ion-label>
+              <ion-datetime></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Nombre del titular*:</ion-label>
+              <ion-input type="text" formControlName="name"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="creditoForm.get('name').errors && creditoForm.get('name').dirty">
+                <p *ngIf="creditoForm.get('name').hasError('required')" ion-text color="danger">Requerido.</p>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Codigo de seguridad*:</ion-label>
+              <ion-input type="number" formControlName="code"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="creditoForm.get('code').errors && creditoForm.get('code').dirty">
+                <p *ngIf="creditoForm.get('code').hasError('required')" ion-text color="danger">Requerido.</p>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <ion-grid>
+      <ion-row>
+        <ion-col col-2>
+          <img class="card" src="assets/imgs/logos/multicard.png" alt="">
+        </ion-col>
+        <ion-col col-10>
+          <p>3 digitos en el reverso de la tarjeta o 4 digitos en el anverso de la tarjeta</p>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <div class="padding">
+    <button ion-button block (click)="buyOrder()" [disabled]="creditoForm.invalid">Comprar</button>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Medios de Pago</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>BANCA ELECTRONICA</h1>
+  <p>Paga desde el sitio web o desde las oficinas del banco a tu elecciòn.</p>
+  <ion-grid class="center">
+    <ion-row>
+      <ion-col col-3 (click)="showPage('https://www.bcp.com.bo/ibk/Account/Login')">
+        <img src="assets/imgs/logos/banco_bcp.png" alt="banco">
+      </ion-col>
+      <ion-col col-3 (click)="showPage('https://bnet.bmsc.com.bo/BMSC.ICBanking.WebUI/Administration.WebUI/Pages/General/Login.aspx')">
+        <img src="assets/imgs/logos/banco_bisa.png" alt="banco">
+      </ion-col>
+      <ion-col col-3 (click)="showPage('https://www.bcp.com.bo/ibk/Account/Login')">
+        <img src="assets/imgs/logos/banco-union.jpg" alt="banco">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h1>TARJETA DE CREDITO</h1>
+  <p>Paga con tu tarjeta de crèdito utilizando nuestra pasarela de pago.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 (click)="goToFormCreditCard()">
+        <img class="img" src="assets/imgs/logos/visamastercard.png" alt="banco">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h1>BILLETERA ELECTRÓNICA</h1>
+  <p>Realiza el pago de tu pedido utilizando tu billetera electronica y sigue las instrucciones que saldran a tu celular.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 (click)="goToFormTigoMoney()">
+        <img class="img" src="assets/imgs/logos/tigo.jpg" alt="banco">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

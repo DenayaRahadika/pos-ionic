@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ModalController, AlertController } from 'ionic-angular';
 import { ProductsService } from '../../providers/products.service';
 
 @IonicPage({
@@ -20,11 +20,12 @@ export class ProductsPage {
   showLoad: boolean = false;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     public productsService: ProductsService,
     private toasCtrl: ToastController,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private alertCtrl: AlertController
   ) {
     this.codefamily = this.navParams.get('familyCode');
     console.log(this.codefamily);
@@ -35,58 +36,82 @@ export class ProductsPage {
     this.getProducts();
   }
 
-  private getProducts(){
+  private getProducts() {
     this.productsService.getFamily()
-    .then(data =>{
-      console.log(data);
-      for(const cod in data){
-        if(data[cod].id == this.codefamily){
-          this.products = data[cod].products;
+      .then(data => {
+        console.log(data);
+        for (const cod in data) {
+          if (data[cod].id == this.codefamily) {
+            this.products = data[cod].products;
+          }
         }
-      }
-      console.log(this.products);
-    })
+        console.log(this.products);
+      })
   }
 
-  clickedProduct( product ){
+  clickedProduct(product) {
     this.productSelected = Object.assign({}, product);
     this.productSelected.count = 0;
   }
 
-  getIsActive( product ){
-    if(this.productSelected === null){
+  getIsActive(product) {
+    if (this.productSelected === null) {
       return false;
-    }else{
-      return (this.productSelected.code+this.productSelected.name) == (product.code+product.name);
+    } else {
+      return (this.productSelected.code + this.productSelected.name) == (product.code + product.name);
     }
   }
 
-  add(){
+  showCountAlert(event: Event) {
+    event.preventDefault();
+    const alert = this.alertCtrl.create({
+      title: 'Cantidad',
+      inputs: [
+        {
+          name: 'count',
+          type: 'number',
+          value: this.productSelected.count
+        }
+      ],
+      buttons: [
+        {
+          text: 'Aceptar'
+        }
+      ]
+    });
+    alert.present();
+    alert.onDidDismiss((data) => {
+      console.log(data);
+        this.productSelected.count = data.count;
+    });
+  }
+
+  add() {
     this.productSelected.count++;
   }
 
-  remove(){
+  remove() {
     this.productSelected.count--;
   }
 
-  close(){
+  close() {
     this.productSelected = null;
   }
 
-  addProduct(){
+  addProduct() {
     this.showLoad = true;
     this.productsOrder.push(this.productSelected);
     this.showLoad = false;
-      this.close();
-      let toast = this.toasCtrl.create({
-        message: 'Producto agregado',
-        duration: 1000
-      });
-      toast.present();
+    this.close();
+    let toast = this.toasCtrl.create({
+      message: 'Producto agregado',
+      duration: 1000
+    });
+    toast.present();
   }
 
-  showOrder(){
-    let modal = this.modalCtrl.create('OrderPage',{
+  showOrder() {
+    let modal = this.modalCtrl.create('OrderPage', {
       order: this.productsOrder
     });
     modal.present();

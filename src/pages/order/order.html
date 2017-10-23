@@ -23,7 +23,7 @@
                 <ion-item *ngIf="products.length == 0">
                   No hay productos agregados
                 </ion-item>
-                <ion-item *ngFor="let product of products; let i = index ">
+                <ion-item *ngFor="let product of products; let i = index " (click)="showActionSheet(product, i)">
                   <ion-thumbnail item-left>
                     <img [src]="product.image">
                   </ion-thumbnail>

@@ -20,7 +20,6 @@ export class ListOrderPage {
   ) {
   }
 
-  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListOrderPage');
     this.getOrder();

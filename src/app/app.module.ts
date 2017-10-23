@@ -6,6 +6,8 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 import { ProductsService } from '../providers/products.service';
 import { ClientsService } from '../providers/clients.service';
 import { OrdersService } from '../providers/orders.service';
@@ -49,6 +51,7 @@ const configFirebase = {
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductsService,
     ClientsService,

@@ -10,13 +10,13 @@
   </ion-header>
   
   <ion-content padding>
-    <div class="center">
-        <img [src]="product.image">
-        <h6> {{product.name}} </h6>
-    </div>
-    <ion-item class="mover">
-        <p><b>CP:</b> {{ product.code }}</p>
-        <p><b>precio:</b> 5 bs.</p>
-        <p><b>UB:</b> {{ product.UBE }}</p>
-    </ion-item>
-  </ion-content>
+      <div class="center">
+          <img [src]="product.image">
+          <h6> {{product.name}} </h6>
+      </div>
+      <ion-item class="mover">
+          <p>Precio: <b>{{ product.precio}} bs. </b> </p> 
+          <p>Cantidad: <b> {{product.count}} </b> </p>  
+          <p> <b>Bs.{{product.count * product.precio}} </b></p>
+      </ion-item>
+    </ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Tigo Money</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form novalidate [formGroup]="tigoForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <img class="tigo" src="assets/imgs/logos/tigo1.png" alt="">
+        </ion-col>
+        <ion-col col-6>
+            <img src="assets/imgs/logos/tigo.png" alt="">
+            <ion-list>
+                <ion-item>
+                  <ion-label stacked>Línea:</ion-label>
+                  <ion-input type="cel" formControlName="linea"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="tigoForm.get('linea').errors && tigoForm.get('linea').dirty">
+                    <p *ngIf="tigoForm.get('linea').hasError('required')" ion-text color="danger">Requerido.</p>
+                </ion-item>
+                <ion-item>
+                  <ion-label stacked>Nombre completo:</ion-label>
+                  <ion-input type="text" formControlName="name"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="tigoForm.get('name').errors && tigoForm.get('name').dirty">
+                    <p *ngIf="tigoForm.get('name').hasError('required')" ion-text color="danger">Requerido.</p>
+                </ion-item>
+                <ion-item>
+                  <ion-label stacked>Nro documento:</ion-label>
+                  <ion-input type="number" formControlName="ci"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="tigoForm.get('ci').errors && tigoForm.get('ci').dirty">
+                    <p *ngIf="tigoForm.get('ci').hasError('required')" ion-text color="danger">Requerido.</p>
+                </ion-item>
+              </ion-list>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+    <div class="padding">
+      <button ion-button block (click)="buyOrder()" [disabled]="tigoForm.invalid">pagar</button>
+    </div>
+  </form>
+</ion-content>

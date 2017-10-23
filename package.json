@@ -21,10 +21,12 @@
         "@angular/platform-browser": "4.4.3",
         "@angular/platform-browser-dynamic": "4.4.3",
         "@ionic-native/core": "4.3.0",
+        "@ionic-native/in-app-browser": "^4.3.2",
         "@ionic-native/splash-screen": "4.3.0",
         "@ionic-native/status-bar": "4.3.0",
         "@ionic/storage": "^2.0.1",
         "angularfire2": "^5.0.0-rc.3",
+        "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-sqlite-storage": "^2.0.4",
         "firebase": "^4.6.0",
         "ionic-angular": "3.7.1",
@@ -42,7 +44,8 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-sqlite-storage": {}
+            "cordova-sqlite-storage": {},
+            "cordova-plugin-inappbrowser": {}
         }
     }
 }
