@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, MenuController, NavParams } from 'ionic-angular';
 
-import { OrdersService } from '../../providers/orders.service';
+// import { OrdersService } from '../../providers/orders.service';
 
 @IonicPage({
   name: 'HomePage',
@@ -19,7 +19,7 @@ export class HomePage {
     public navCtrl: NavController,
     public menuCtrl: MenuController,
     public navParams: NavParams,
-    private orderService: OrdersService
+    // private orderService: OrdersService
   ) {
     this.user = this.navParams.get('user');
     console.log(this.user);

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title class="title">Products</ion-title>
+      <ion-searchbar debounce="400" showCancelButton="true" (input)="search($event)"></ion-searchbar>
     <ion-buttons right>
       <button ion-button icon-only (click)="showOrder()">
       <ion-icon name="cart"></ion-icon>
@@ -13,7 +13,7 @@
 <ion-content>
   <ion-grid no-margin no-padding>
     <ion-row no-margin no-padding>
-      <ion-col text-center col-6 *ngFor="let product of products">
+      <ion-col text-center col-6 *ngFor="let product of productShow">
         <a class="product-cover" (click)="clickedProduct( product )" [class.selected]="getIsActive( product )">
           <ion-icon name="checkmark-circle"></ion-icon>
           <div class="cover">
@@ -23,6 +23,9 @@
           <p>CP {{ product.code }}</p>
           <p>precio {{ product.precio }} bs.</p>
           <p>UB: {{ product.UBE }}</p>
+          <button small ion-button clear color="danger" (click)="detail(product)" >
+            <a ref="" >detalles...</a>
+          </button>
         </a>
       </ion-col>
     </ion-row>

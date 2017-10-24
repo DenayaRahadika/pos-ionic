@@ -18,6 +18,7 @@ export class ProductsPage {
   productsOrder: any[] = [];
   productSelected: any = null;
   showLoad: boolean = false;
+  productShow: any[] = [];
 
   constructor(
     public navCtrl: NavController,
@@ -45,6 +46,7 @@ export class ProductsPage {
             this.products = data[cod].products;
           }
         }
+        this.productShow = this.products;
         console.log(this.products);
       })
   }
@@ -117,4 +119,23 @@ export class ProductsPage {
     modal.present();
   }
 
+  search(event: any){
+    if(event.target && event.target.value){
+      let query = event.target.value.trim();
+      console.log(query);
+       this.productShow = this.products.filter(item => {
+        return item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+      });
+    }else{
+      this.productShow = this.products;
+    }
+  }
+  
+  detail(product){
+    console.log("detail");
+    this.productSelected = Object.assign({}, product);
+    this.navCtrl.push('ProductPage',{
+      product: product
+    });
+  }
 }

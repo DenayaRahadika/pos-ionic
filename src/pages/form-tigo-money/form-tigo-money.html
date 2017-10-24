@@ -16,7 +16,7 @@
             <ion-list>
                 <ion-item>
                   <ion-label stacked>Línea:</ion-label>
-                  <ion-input type="cel" formControlName="linea"></ion-input>
+                  <ion-input type="tel" formControlName="linea"></ion-input>
                 </ion-item>
                 <ion-item *ngIf="tigoForm.get('linea').errors && tigoForm.get('linea').dirty">
                     <p *ngIf="tigoForm.get('linea').hasError('required')" ion-text color="danger">Requerido.</p>

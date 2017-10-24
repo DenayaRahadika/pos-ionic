@@ -11,14 +11,6 @@
   
   <ion-content>
           <ion-card>
-              <!-- <ion-item>
-                <ion-avatar item-left>
-                  <img [src]="user.photo">
-                </ion-avatar>
-                <h2>{{ user.name }} {{ user.apPat}}</h2>
-                <p>Dirección: {{ user.direction }}</p>
-                <p>Código: {{ user.codClient }}</p>
-              </ion-item> -->
               <ion-list>
                 <ion-item *ngIf="products.length == 0">
                   No hay productos agregados
@@ -28,9 +20,9 @@
                     <img [src]="product.image">
                   </ion-thumbnail>
                   <h2>{{product.name}}</h2>
-                  <p>Precio: <b>{{ product.precio}} bs. </b> </p> 
+                  <p>Precio: <b>Bs. {{ product.precio}}</b> </p> 
                   <p>Cantidad: <b> {{product.count}} </b> </p>  
-                  <p> <b>Bs.{{product.count * product.precio}} </b></p>
+                  <p><b>Bs. {{product.count * product.precio}} </b></p>
                   <button class="icon" ion-button clear item-right icon-only (click)="delete( product, i )">
                     <ion-icon color="danger" name="ios-trash-outline"></ion-icon> 
                   </button>

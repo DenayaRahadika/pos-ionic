@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, LoadingController } from 'ionic-angular';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -14,7 +14,6 @@ export class FormCreditCardPage {
 
   constructor(
     public navCtrl: NavController,
-    private navParams: NavParams,
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
     private formBuilder: FormBuilder

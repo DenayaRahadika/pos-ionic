@@ -26,14 +26,9 @@ export class OrderPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OrderPage');
-    this.getClient();
     this.getProducts();
   }
-
-  private getClient(){
-
-  }
-
+  
   addOrder(){
     // this.orderService.addOrder(this.products);
     this.navCtrl.push('PaymentsPage');

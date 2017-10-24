@@ -9,21 +9,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <div class="center">
-    <img [src]="product.image">
-    <h6> {{product.name}} </h6>
-    <ion-item class="mover">
-      <p>Precio: <b>{{ product.precio}} bs. </b> </p>
-    </ion-item>
-    <ion-item class="mover">
-      <ion-label>Cantidad: </ion-label>
-      <ion-input type="text">{{product.count}}</ion-input>
-    </ion-item>
-    <p>Total: <b>Bs.{{product.count * product.precio}} </b></p>
-  </div>
-
-  <div class="padding" class="center">
-    <button ion-button color="primary" round block (click)="close()">Aceptar</button>
+<ion-content padding class="center">
+    <div class="center">
+        <img [src]="product.image">
+        <h6> {{product.name}} </h6>
+    </div>
+  <ion-grid class="center">
+    <ion-row align-items-center no-margin no-padding >
+        <ion-col col-3  style='margin-left: 100px;'>
+            <p>Precio: <b>Bs. {{ product.precio}}</b> </p>
+            <p>Total: <b>Bs.{{box.value * product.precio}} </b></p>
+        </ion-col>
+        <ion-col col-5>
+            <ion-item>
+                <ion-label>Cantidad:</ion-label>
+                <ion-input type="number" value="{{product.count}}" #box (keyup)="onKey(box.value)">{{value}}</ion-input>
+              </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  <div class="padding">
+    <button ion-button color="primary" round block (click)="save()">Aceptar</button>
   </div>
 </ion-content>

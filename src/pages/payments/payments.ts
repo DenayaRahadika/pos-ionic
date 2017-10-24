@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -12,7 +12,6 @@ export class PaymentsPage {
 
   constructor(
     private navCtrl: NavController,
-    private navParams: NavParams,
     private iab: InAppBrowser
   ) {
   }
