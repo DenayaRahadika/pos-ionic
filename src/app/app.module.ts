@@ -22,7 +22,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { Geolocation } from '@ionic-native/geolocation';
-// import { GoogleMaps } from '@ionic-native/google-maps';
 
 const configFirebase = {
   apiKey: "AIzaSyCNpCgHH43amuKWOSeE2VciLO_dTTAgY_4",

@@ -27,7 +27,7 @@
         "@ionic-native/status-bar": "4.3.0",
         "@ionic/storage": "^2.0.1",
         "angularfire2": "^5.0.0-rc.3",
-        "cordova-plugin-geolocation": "file:node_modules/cordova-plugin-geolocation",
+        "cordova-plugin-geolocation": "^2.4.3",
         "cordova-plugin-googlemaps": "file:node_modules/cordova-plugin-googlemaps",
         "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-sqlite-storage": "^2.0.4",

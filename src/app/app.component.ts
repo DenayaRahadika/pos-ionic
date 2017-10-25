@@ -22,8 +22,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { 
-        title: 'Inicio', 
-        icon: 'home', 
+        title: 'Noticias', 
+        icon: 'md-globe', 
         component: 'HomePage' 
       },
       { 

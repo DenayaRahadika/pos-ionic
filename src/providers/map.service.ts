@@ -11,4 +11,10 @@ export class MapService {
     console.log('Hello MapProvider Provider');
   }
 
+  getData(){
+    return this.http.get('assets/json/sucursal.json')
+    .map(response => response.json())
+    .toPromise();
+  }
+
 }
