@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>BANCA ELECTRONICA</h1>
+  <!-- <h1>BANCA ELECTRONICA</h1>
   <p>Paga desde el sitio web o desde las oficinas del banco a tu elecciòn.</p>
   <ion-grid class="center">
     <ion-row>
@@ -19,7 +19,18 @@
         <img src="assets/imgs/logos/banco-union.jpg" alt="banco">
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
+<h1>CUENTA PERSONAL</h1>
+<p>Realice su pago con su credito de cuenta personal</p>
+<ion-grid class="center">
+  <ion-row>
+    <ion-col col-6>
+        <button color="primary" block ion-button (click)="buyOrder()" type="button">
+            Pagar
+          </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
   <h1>TARJETA DE CREDITO</h1>
   <p>Paga con tu tarjeta de crèdito utilizando nuestra pasarela de pago.</p>
   <ion-grid>
@@ -35,6 +46,17 @@
     <ion-row>
       <ion-col col-3 (click)="goToFormTigoMoney()">
         <img class="img" src="assets/imgs/logos/tigo.jpg" alt="banco">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h1>PAGO AL CONTADO</h1>
+  <p>Realice su reserva y pague en la sucursal</p>
+  <ion-grid class="center">
+    <ion-row>
+      <ion-col col-6>
+        <button color="primary" block ion-button (click)="Reserva()" type="button">
+            Reservar
+          </button>
       </ion-col>
     </ion-row>
   </ion-grid>

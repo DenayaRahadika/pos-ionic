@@ -11,6 +11,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ProductsService } from '../providers/products.service';
 import { ClientsService } from '../providers/clients.service';
 import { OrdersService } from '../providers/orders.service';
+import { MapService } from '../providers/map.service';
 
 import { HttpModule } from '@angular/http';
 import { AuthProvider } from '../providers/auth.service';
@@ -19,6 +20,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { IonicStorageModule } from '@ionic/storage';
+
+import { Geolocation } from '@ionic-native/geolocation';
+// import { GoogleMaps } from '@ionic-native/google-maps';
 
 const configFirebase = {
   apiKey: "AIzaSyCNpCgHH43amuKWOSeE2VciLO_dTTAgY_4",
@@ -52,11 +56,14 @@ const configFirebase = {
     StatusBar,
     SplashScreen,
     InAppBrowser,
+    Geolocation,
+    // GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductsService,
     ClientsService,
     AuthProvider,
-    OrdersService 
+    OrdersService,
+    MapService
   ]
 })
 export class AppModule {}

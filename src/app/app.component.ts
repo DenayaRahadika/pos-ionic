@@ -35,8 +35,13 @@ export class MyApp {
         title: 'Carrito de Compra', 
         icon: 'cart', 
         component: 'ListOrderPage' 
+      },
+      { 
+        title: 'Map', 
+        icon: 'map', 
+        component: 'MapSucursalPage' 
       }
-      
+    
     ];
 
   }

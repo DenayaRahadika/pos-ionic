@@ -25,3 +25,4 @@ AIzaSyDdQhkbtzMV1w-TZXhnPWD3tncn_aMCKkY
 Av. Irigoyen Nº 1951, Zona Sarco -17.3725616,-66.1835768
 Substitute ios for android if not on a Mac.
 
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyDdQhkbtzMV1w-TZXhnPWD3tncn_aMCKkY"

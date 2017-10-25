@@ -1,22 +1,22 @@
 <ion-header>
     <ion-navbar color="primary">
-    <ion-title class="center">CP: {{product.code}}</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only (click)="close()">
+        <ion-title class="center">CP: {{product.code}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="close()">
         <ion-icon name="close"></ion-icon>
       </button>
-    </ion-buttons>
+        </ion-buttons>
     </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-      <div class="center">
-          <img [src]="product.image">
-          <h6> {{product.name}} </h6>
-      </div>
-      <div class="mover">
-          <p>Precio: <b> Bs. {{ product.precio}}</b> </p> 
-          <p>Cantidad: <b> {{product.count}} </b> </p>  
-          <p>Costo Total: <b>Bs.{{product.count * product.precio}} </b></p>
-      </div>
-    </ion-content>
+</ion-header>
+
+<ion-content padding>
+    <div class="center">
+        <img [src]="product.image">
+        <h6> {{product.name}} </h6>
+    </div>
+    <div class="mover">
+        <p>Precio: <b> Bs. {{ product.precio}}</b> </p>
+        <p>CP: <b> {{ product.code }} </b> </p>
+        <p>UB: <b>{{ product.UBE }} </b></p>
+    </div>
+</ion-content>

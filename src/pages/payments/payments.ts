@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, LoadingController } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -12,7 +12,9 @@ export class PaymentsPage {
 
   constructor(
     private navCtrl: NavController,
-    private iab: InAppBrowser
+    private iab: InAppBrowser,
+    private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController
   ) {
   }
 
@@ -33,4 +35,38 @@ export class PaymentsPage {
     this.navCtrl.push('FormTigoMoneyPage');
   }
 
+  buyOrder() {
+    const loading = this.loadingCtrl.create({
+      content: 'Verificando...'
+    });
+    loading.present();
+    setTimeout(() => {
+      const alert = this.alertCtrl.create({
+        title: 'Exitosamente',
+        subTitle: 'Se realizo la transaccion correctamente',
+        buttons: ['OK']
+      });
+      alert.present();
+      loading.dismiss();
+      this.navCtrl.pop();
+    }, 5000);
+  }
+
+  Reserva(){
+    const loading = this.loadingCtrl.create({
+      content: 'Verificando...'
+    });
+    loading.present();
+    setTimeout(() => {
+      const alert = this.alertCtrl.create({
+        title: 'Exitosamente',
+        subTitle: 'Lo esperamos en la sucursal para recoger su pedido',
+        buttons: ['OK']
+      });
+      alert.present();
+      loading.dismiss();
+      this.navCtrl.pop();
+    }, 5000);
+  }
+  
 }

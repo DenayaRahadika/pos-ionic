@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ActionSheetController, AlertController } from 'ionic-angular';
 
 // import { OrdersService } from '../../providers/orders.service';
 
@@ -18,7 +18,8 @@ export class OrderPage {
     public navParams: NavParams,
     private viewCtrl: ViewController,
     // private orderService: OrdersService,
-    public actionSheetCtrl: ActionSheetController
+    public actionSheetCtrl: ActionSheetController,
+    private alertCtrl: AlertController
   ) {
     this.products = this.navParams.get('order');
     console.log(this.products);
@@ -42,6 +43,29 @@ export class OrderPage {
     this.products.splice( i, 1 );
   }
 
+  showAlertDelete( product: any, i){
+    let alert = this.alertCtrl.create({
+      title: '¿Estás seguro?',
+      message: 'El pedido se eliminara',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: ()=>{
+            console.log('cancelar');
+          }
+        },
+        {
+          text: 'Si, estoy seguro',
+          handler: ()=>{
+            this.delete( product, i);
+          }
+        },
+      ]
+    });
+    alert.present();
+  }
+
   private getProducts(){
       let total = 0;
       this.products.forEach((item)=>{
@@ -58,14 +82,16 @@ export class OrderPage {
       buttons: [
         {
           text: 'Ver',
+          icon: 'md-eye',
           handler: () => {
-            this.navCtrl.push('ProductPage',{
+            this.navCtrl.push('OrderDetailPage',{
               product: product
             });
           }
         },
         {
           text: 'Modificar',
+          icon:'md-create',
           handler: () => {
             this.navCtrl.push('EditProductPage',{
               product: product
@@ -73,8 +99,16 @@ export class OrderPage {
           }
         },
         {
+          icon: 'md-trash',
+          text: 'Eliminar',
+          handler: () => {
+            this.showAlertDelete(product, i);
+          }
+        },
+        {
           text: 'Cancel',
           role: 'cancel',
+          icon: 'md-close',
           handler: () => {
             console.log('Cancel clicked');
           }
