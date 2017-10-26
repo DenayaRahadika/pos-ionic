@@ -28,20 +28,14 @@ export class MyApp {
       },
       { 
         title: 'Realizar Pedido', 
-        icon: 'clipboard', 
-        component: 'LinesPage' 
+        icon: 'md-clipboard', 
+        component: 'MapSucursalPage' 
       },
       { 
         title: 'Carrito de Compra', 
         icon: 'cart', 
         component: 'ListOrderPage' 
-      },
-      { 
-        title: 'Map', 
-        icon: 'map', 
-        component: 'MapSucursalPage' 
       }
-    
     ];
 
   }

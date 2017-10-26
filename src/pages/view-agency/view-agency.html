@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ sucursal.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img [src]="sucursal.image">
+
+  <ion-list>
+
+    <ion-item>
+      <h2>Nombre: </h2>
+      <p>{{ sucursal.name }}</p>
+    </ion-item>
+
+    <ion-item>
+      <h2>Telefono: </h2>
+      <p>{{ sucursal.telefono}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

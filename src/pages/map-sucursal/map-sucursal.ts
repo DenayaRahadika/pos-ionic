@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, LoadingController, ModalController } from 'ionic-angular';
 
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -19,20 +19,24 @@ export class MapSucursalPage {
   myLatLng: any = {};
   infowindow: any;
   sucursales: any;
+  listSucursal: any[] =[];
+  itemSelected: any = null;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private loadCtrl: LoadingController,
     private geolocation: Geolocation,
-    private mapService: MapService
+    private mapService: MapService, 
+    private modalCtrl: ModalController
   ) {
+    this.infowindow = new google.maps.InfoWindow();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MapSucursalPage');
     this.load = this.loadCtrl.create({
-      content: 'Buscando ruta'
+      content: 'Cargando...'
     });
     this.load.present();
     this.getPosition();
@@ -43,7 +47,6 @@ export class MapSucursalPage {
       maximumAge: 20000
     })
     .then(position => {
-      console.log(position);
       this.myLatLng = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -62,10 +65,10 @@ export class MapSucursalPage {
     // create map
     this.map = new google.maps.Map(mapEle, {
       center: this.myLatLng,
-      zoom: 8
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     const icon = './assets/imgs/default.png';
-    console.log(this.myLatLng.lat);
     this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon , 'yo' );
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
@@ -76,7 +79,6 @@ export class MapSucursalPage {
   }
 
   private createMarker(lat: number, lng: number, icon: string, nombre: string) {
-    console.log(lat, lng, icon, nombre );
     const options = {
       position: {
         lat: lat,
@@ -88,9 +90,7 @@ export class MapSucursalPage {
       zIndex: Math.round(lat * -100000)
     };
     const marker = new google.maps.Marker(options);
-    const contentString = '<div>' +
-                         + nombre + '</b> </div>' +
-                        '</div>';
+    const contentString = '<div> <b>' + nombre + '</b> </div>';
       marker.addListener('click', () => {
       this.infowindow.setContent(contentString);
       this.infowindow.open(this.map, marker);
@@ -101,12 +101,47 @@ export class MapSucursalPage {
   private getSucursal() {
     this.mapService.getData()
     .then(data=>{
-      console.log(data);
       this.sucursales = data;
       this.sucursales.forEach(sucursal => {
         console.log(sucursal);
+        const icon = './assets/imgs/sucursal.png';
+        sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+        this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+        this.listSucursal.push({
+          name: sucursal.name,
+          image: sucursal.image,
+          marker: sucursal.marker,
+          telefono: sucursal.telefono,
+          latitude: sucursal.latitude,
+          longitude:sucursal.longitude,
+          color: 'primary'
+        });
       });
+      console.log("list", this.listSucursal);
     })
+  }
+
+  clickSucursal(sucursal){
+    if(sucursal){
+      this.itemSelected = sucursal;
+    }
+    google.maps.event.trigger(sucursal.marker, 'click');
+  }
+
+  showOrder() {
+    this.navCtrl.push('LinesPage');
+  }
+
+  showSucursal(sucursal) {
+    console.log(this.itemSelected);
+    let modal = this.modalCtrl.create('ViewAgencyPage',{
+      sucursal: this.itemSelected,
+    });
+    modal.present();
+  }
+
+  closeOptions(){
+    this.itemSelected = null;
   }
 
 }

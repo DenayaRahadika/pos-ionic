@@ -22,38 +22,7 @@ export class LinesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LinesPage');
-    this.getSucursal();
-  }
-
-  private getSucursal(){
-    this.productsService.getSucursal()
-    .then(sucursal=>{
-      let alert = this.alertCtrl.create();
-      alert.setTitle('Sucursal');
-      sucursal.forEach(element => {
-        console.log(element);
-        alert.addInput({
-          type: 'radio',
-          label: element.name,
-          value: element.idSucursal,
-          checked: false
-        });
-    });
-    alert.addButton({
-      text: 'Cancel',
-      handler: data => {
-        console.log('cancel', data);
-      }
-    });
-    alert.addButton({
-      text: 'OK',
-      handler: data => {
-        console.log('ok', data);
-      }
-    });
-    alert.present();
-  })
-      this.getLines(); 
+    this.getLines();
   }
 
   private getLines(){
