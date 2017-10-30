@@ -31,7 +31,6 @@
         "cordova-ios": "^4.5.1",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-geolocation": "^2.4.3",
-        "cordova-plugin-googlemaps": "file:node_modules/cordova-plugin-googlemaps",
         "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-plugin-ionic-webview": "^1.1.11",
         "cordova-plugin-splashscreen": "^4.0.3",

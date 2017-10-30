@@ -56,7 +56,6 @@ const configFirebase = {
     SplashScreen,
     InAppBrowser,
     Geolocation,
-    // GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductsService,
     ClientsService,

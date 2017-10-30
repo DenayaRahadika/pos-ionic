@@ -39,7 +39,7 @@ export class LoginPage {
     event.preventDefault();
     const usuario = this.loginForm.value.usuario;
     const password = this.loginForm.value.password;
-    if(usuario == "zule" && password == "123456"){
+    if(usuario == "zvicente" && password == "123456"){
       console.log(usuario, password);
       const user = JSON.stringify(usuario);
       this.storage.set('user', user);

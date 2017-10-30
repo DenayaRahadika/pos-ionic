@@ -35,7 +35,7 @@ export class ListOrderPage {
       });
     });
     console.log(this.orders);
-    this.total = 50;
+    this.total = 48;
   }
 
 }
