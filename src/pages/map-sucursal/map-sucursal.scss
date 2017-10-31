@@ -1,4 +1,8 @@
 page-map-sucursal {
+
+  .title {
+    text-align: center;
+  }
   ion-content{
     background: rgb(229, 227, 223);
     #map {
@@ -12,6 +16,7 @@ page-map-sucursal {
       }
     }
     .scroll{
+      right: 20px;
       height: calc(100% - 250px);
     }
     .item-map{

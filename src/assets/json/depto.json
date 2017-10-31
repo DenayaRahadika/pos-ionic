@@ -1,0 +1,38 @@
+[
+    {
+      "ID_DEPTO": "260",
+      "name":"Cochabamba"
+    },
+    {
+      "ID_DEPTO": "261",
+      "name":"Santa Cruz"
+    },
+    {
+      "ID_DEPTO": "262",
+      "name":"Sucre"
+    },
+    {
+      "ID_DEPTO": "263",
+      "name":"Oruro"
+    },
+    {
+      "ID_DEPTO": "264",
+      "name":"Potosi"
+    },
+    {
+      "ID_DEPTO": "265",
+      "name":"Tarija"
+    } ,
+    {
+      "ID_DEPTO": "266",
+      "name":"Beni"
+    },
+    {
+      "ID_DEPTO": "267",
+      "name":"Pando"
+    },
+    {
+      "ID_DEPTO": "268",
+      "name":"La Paz"
+    } 
+]

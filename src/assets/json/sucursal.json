@@ -6,7 +6,8 @@
         "latitude": -17.4185476,
         "longitude": -66.1312004,
         "telefono": "443-30-23-50",
-        "image": "assets/imgs/sucursal/feria.png"
+        "image": "assets/imgs/sucursal/feria.png",
+        "ID_DEPTO": "260"
     },
     {
         "idSucursal":"2",
@@ -15,7 +16,8 @@
         "latitude": -17.3725616,
         "longitude": -66.1835768,
         "telefono": "443-30-23-50",
-        "image": "assets/imgs/sucursal/sarco.png"
+        "image": "assets/imgs/sucursal/sarco.png",
+        "ID_DEPTO": "260"
     },
     {
         "idSucursal":"3",
@@ -24,7 +26,8 @@
         "latitude": -17.3943065,
         "longitude": -66.1597232,
         "telefono": "443-30-23-50",
-        "image": "assets/imgs/sucursal/junin.png"
+        "image": "assets/imgs/sucursal/junin.png",
+        "ID_DEPTO": "260"
     },
     {
         "idSucursal":"4",
@@ -33,7 +36,8 @@
         "latitude": -17.3903846,
         "longitude": -66.2567157,
         "telefono": "443-30-23-50",
-        "image": "assets/imgs/sucursal/sarco.png"
+        "image": "assets/imgs/sucursal/sarco.png",
+        "ID_DEPTO": "260"
     },
     {
         "idSucursal":"6",
@@ -42,7 +46,8 @@
         "latitude": -16.4972693,
         "longitude": -68.1325426,
         "telefono": "443-30-23-50",
-        "image": "assets/imgs/sucursal/sarco.png"
+        "image": "assets/imgs/sucursal/sarco.png",
+        "ID_DEPTO": "268"
     }
 ]
 

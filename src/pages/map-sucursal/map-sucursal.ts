@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, LoadingController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, LoadingController, ModalController, PopoverController } from 'ionic-angular';
 
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -13,23 +13,28 @@ declare var google;
   templateUrl: 'map-sucursal.html',
 })
 export class MapSucursalPage {
-  
+
   map: any;
   load: Loading;
   myLatLng: any = {};
   infowindow: any;
   sucursales: any;
-  listSucursal: any[] =[];
+  listSucursal: any[] = [];
   itemSelected: any = null;
+  sucursalID: string;
+
+  bounds: any = null;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private loadCtrl: LoadingController,
     private geolocation: Geolocation,
-    private mapService: MapService, 
-    private modalCtrl: ModalController
+    private mapService: MapService,
+    private modalCtrl: ModalController,
+    private popoverCtrl: PopoverController
   ) {
+    this.bounds = new google.maps.LatLngBounds();
     this.infowindow = new google.maps.InfoWindow();
   }
 
@@ -42,23 +47,23 @@ export class MapSucursalPage {
     this.getPosition();
   }
 
-  private getPosition():any{
+  private getPosition(): any {
     this.geolocation.getCurrentPosition({
       maximumAge: 20000
     })
-    .then(position => {
-      this.myLatLng = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      this.loadMap();
-    })
-    .catch(error =>{
-      this.load.dismiss();
-    })
+      .then(position => {
+        this.myLatLng = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        this.loadMap();
+      })
+      .catch(error => {
+        this.load.dismiss();
+      })
   }
 
-  private loadMap(){
+  private loadMap() {
     // create a new map by passing HTMLElement
     let mapEle: HTMLElement = document.getElementById('map');
 
@@ -69,11 +74,11 @@ export class MapSucursalPage {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     const icon = './assets/imgs/default.png';
-    this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon , 'yo' );
+    this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon, 'yo');
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
-      this.getSucursal(); 
+      this.getSucursal();
     });
     this.load.dismiss();
   }
@@ -91,7 +96,7 @@ export class MapSucursalPage {
     };
     const marker = new google.maps.Marker(options);
     const contentString = '<div> <b>' + nombre + '</b> </div>';
-      marker.addListener('click', () => {
+    marker.addListener('click', () => {
       this.infowindow.setContent(contentString);
       this.infowindow.open(this.map, marker);
     });
@@ -100,29 +105,31 @@ export class MapSucursalPage {
 
   private getSucursal() {
     this.mapService.getData()
-    .then(data=>{
-      this.sucursales = data;
-      this.sucursales.forEach(sucursal => {
-        console.log(sucursal);
-        const icon = './assets/imgs/sucursal.png';
-        sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
-        this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
-        this.listSucursal.push({
-          name: sucursal.name,
-          image: sucursal.image,
-          marker: sucursal.marker,
-          telefono: sucursal.telefono,
-          latitude: sucursal.latitude,
-          longitude:sucursal.longitude,
-          color: 'primary'
+      .then(data => {
+        this.sucursales = data;
+        this.sucursales.forEach(sucursal => {
+          console.log(sucursal);
+          const icon = './assets/imgs/sucursal.png';
+          sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+          this.fixBounds(sucursal.latitude, sucursal.longitude);
+          this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+          this.listSucursal.push({
+            name: sucursal.name,
+            image: sucursal.image,
+            marker: sucursal.marker,
+            telefono: sucursal.telefono,
+            latitude: sucursal.latitude,
+            longitude: sucursal.longitude,
+            idSucursal: sucursal.idSucursal,
+            color: 'primary'
+          });
         });
-      });
-      console.log("list", this.listSucursal);
-    })
+        console.log("list", this.listSucursal);
+      })
   }
 
-  clickSucursal(sucursal){
-    if(sucursal){
+  clickSucursal(sucursal) {
+    if (sucursal) {
       this.itemSelected = sucursal;
     }
     google.maps.event.trigger(sucursal.marker, 'click');
@@ -134,13 +141,40 @@ export class MapSucursalPage {
 
   showSucursal(sucursal) {
     console.log(this.itemSelected);
-    let modal = this.modalCtrl.create('ViewAgencyPage',{
+    let modal = this.modalCtrl.create('ViewAgencyPage', {
       sucursal: this.itemSelected,
     });
     modal.present();
   }
 
-  closeOptions(){
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create('PopoverListPage');
+    popover.present({
+      ev: myEvent
+    });
+    popover.onDidDismiss(value => {
+      console.log('popovover', value);
+      if (value) {
+        this.sucursalID = value;
+        this.listSucursal.forEach(data => {
+          console.log(data);
+          if (data.idSucursal === this.sucursalID) {
+            this.itemSelected = data;
+            console.log(this.itemSelected);
+            google.maps.event.trigger(data.marker, 'click');
+          }
+        })
+      }
+    });
+  }
+
+  private fixBounds(lat: number, lng: number) {
+    const point = new google.maps.LatLng(lat, lng);
+    this.bounds.extend(point);
+    this.map.fitBounds(this.bounds);
+  }
+
+  closeOptions() {
     this.itemSelected = null;
   }
 

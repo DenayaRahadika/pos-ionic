@@ -5,7 +5,12 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title class="Title">Map</ion-title>
+    <ion-title class="title">Map</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="md-paper"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
