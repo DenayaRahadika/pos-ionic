@@ -73,7 +73,7 @@ export class MapSucursalPage {
       zoom: 8,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    const icon = './assets/imgs/default.png';
+    const icon = './assets/imgs/marker1.png';
     this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon, 'yo');
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
@@ -121,6 +121,7 @@ export class MapSucursalPage {
             latitude: sucursal.latitude,
             longitude: sucursal.longitude,
             idSucursal: sucursal.idSucursal,
+            direccion: sucursal.direccion,
             color: 'primary'
           });
         });

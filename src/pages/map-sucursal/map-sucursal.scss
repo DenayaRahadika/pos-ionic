@@ -1,5 +1,4 @@
 page-map-sucursal {
-
   .title {
     text-align: center;
   }
@@ -16,7 +15,6 @@ page-map-sucursal {
       }
     }
     .scroll{
-      right: 20px;
       height: calc(100% - 250px);
     }
     .item-map{
@@ -38,6 +36,7 @@ page-map-sucursal {
     }
   }
 }
+
 div.item-detail{
   position: fixed;
   bottom: 0px;

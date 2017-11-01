@@ -2,6 +2,7 @@
     {
         "idSucursal":"1",
         "name": "Feria CBA FEICOBOL",
+        "direccion": "Av. CIRCUITO BOLIVA (FEICOBOL)",
         "canales": [1,43,42,38,37],
         "latitude": -17.4185476,
         "longitude": -66.1312004,
@@ -12,6 +13,7 @@
     {
         "idSucursal":"2",
         "name": "Sarco CBA",
+        "direccion": "Av. Irigoyen Nº 1951, Zona Sarco",
         "canales": [27,3,2, 52],
         "latitude": -17.3725616,
         "longitude": -66.1835768,
@@ -22,6 +24,7 @@
     {
         "idSucursal":"3",
         "name": "Ag. Junin CBA",
+        "direccion": "Calle Junín # 256 entre Santivañez y Gral. Achá",
         "canales":[33,51,4,5],
         "latitude": -17.3943065,
         "longitude": -66.1597232,
@@ -32,6 +35,7 @@
     {
         "idSucursal":"4",
         "name": "Micromercado CBA",
+        "direccion": "Av. Blanco Galindo Km 10.5",
         "canales":[7,6],
         "latitude": -17.3903846,
         "longitude": -66.2567157,
@@ -40,7 +44,20 @@
         "ID_DEPTO": "260"
     },
     {
+        "idSucursal":"5",
+        "name": "Kiosko CBA",
+        "direccion": "Av. Blanco Galindo Km 10.5",
+        "canales":[7,6],
+        "latitude": -17.3903846,
+        "longitude": -66.2567157,
+        "telefono": "443-30-23-50",
+        "image": "assets/imgs/sucursal/sarco.png",
+        "ID_DEPTO": "260"
+    },
+
+    {
         "idSucursal":"6",
+        "direccion": "Calle Coroico nº 1482 Zona / Barrio: Santa Bárbara Alcaldía La Paz",
         "name": "Agencia Coroico",
         "canales":[36,48,9,10],
         "latitude": -16.4972693,

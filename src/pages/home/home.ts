@@ -18,7 +18,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,
-    public navParams: NavParams,
+    public navParams: NavParams
     // private orderService: OrdersService
   ) {
     this.user = this.navParams.get('user');
@@ -35,6 +35,10 @@ export class HomePage {
 
   private getOrder(){
     // this.orderService.getOrder(this.user);
+  }
+  
+  verSlide() {
+    console.log('info');
   }
 
 }

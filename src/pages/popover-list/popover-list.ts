@@ -17,8 +17,8 @@ export class PopoverListPage {
     console.log('ionViewDidLoad PopoverListPage');
   }
 
-  close(sucursal) {
-    this.viewCtrl.dismiss(sucursal);
+  close(codSucursal) {
+    this.viewCtrl.dismiss(codSucursal);
   }
 
 }

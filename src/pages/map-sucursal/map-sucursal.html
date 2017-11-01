@@ -15,14 +15,15 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <div id="map"></div>
   <ion-scroll scrollY="true" class="scroll">
-    <h5 padding-horizontal>SUCURSALES</h5>
+    <h5 padding-horizontal>LISTA DE SUCURSALES</h5>
     <ion-list>
       <ion-item *ngFor="let sucursal of listSucursal; let i = index;" (click)="clickSucursal(sucursal)">
         <ion-badge [color]="sucursal.color" item-start>{{ i + 1 }}</ion-badge> 
-        <h2 text-wrap>{{ sucursal.name}}</h2>
+        <h2 text-wrap>{{ sucursal.name }}</h2>
+        <p>{{ sucursal.direccion }}</p>
       </ion-item>
     </ion-list>
   </ion-scroll>
