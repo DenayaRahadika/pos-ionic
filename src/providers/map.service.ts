@@ -17,4 +17,10 @@ export class MapService {
     .toPromise();
   }
 
+  getDepto(){
+    return this.http.get('assets/json/depto.json')
+    .map(response => response.json())
+    .toPromise();
+  }
+
 }

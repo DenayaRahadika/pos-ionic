@@ -96,21 +96,21 @@
       {
         "code": "F01182",
         "name": "LECHE CON CAFE X 800 ML.",
-        "image": "http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+        "image": "assets/imgs/families/uht/F01144_200.jpg",
         "UBE": "20",
         "precio": 3
       },
       {
         "code": "F01117",
         "name": "LECHE AVENA CHOCOLATE x 150 ML",
-        "image": "http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+        "image": "assets/imgs/families/uht/F01144_200.jpg",
         "UBE": "20",
         "precio": 5
       },
       {
         "code": "F01118",
         "name": "LECHE P. VIDA CHOCO. UHTX800 ML. (BOLSA)",
-        "image": "http://www.stock.com.py/images/thumbs/0144743_300.jpeg",
+        "image": "assets/imgs/families/uht/F01144_200.jpg",
         "UBE": "20",
         "precio": 6
       }
@@ -123,28 +123,28 @@
       {
         "code": "F01077",
         "name": "LECHE DESLACTOSADA LIGHTx800 ML(BOL)",
-        "image": "http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+        "image": "assets/imgs/lineas/F01076_200.jpg",
         "UBE": "1000 cc",
         "precio": 5
       },
       {
         "code": "F01095",
         "name": "LECHE NUTRIPIL UHT X 850 ML. (BOLSA)",
-        "image": "assets/imgs/F01121_200.jpg",
+        "image": "assets/imgs/lineas/F01076_200.jpg",
         "UBE": "10",
         "precio": 3
       },
       {
         "code": "F01076",
         "name": "LECHE DESLACTOSADA FRUTILLAx800 ML(BOL)",
-        "image": "http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+        "image": "assets/imgs/lineas/F01076_200.jpg",
         "UBE": "1000 cc",
         "precio": 3
       },
       {
         "code": "F01017",
         "name": "LECHE PIL DESLACTOSADA UHT X 800 ML.(BO",
-        "image": "assets/imgs/F01121_200.jpg",
+        "image": "assets/imgs/lineas/F01076_200.jpg",
         "UBE": "10",
         "precio": 5
       }
@@ -157,7 +157,7 @@
       {
         "code": "F01151",
         "name": "LECHE DESCREMADA PROTEPLUS X 800 ML",
-        "image": "http://www.ades.com.ar/Images/2034/2034-1170513-Durazno.png",
+        "image": "assets/imgs/F01121_200.jpg",
         "UBE": "1000 cc",
         "precio": 5
       },

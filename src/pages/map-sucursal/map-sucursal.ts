@@ -73,8 +73,8 @@ export class MapSucursalPage {
       zoom: 8,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    const icon = './assets/imgs/marker1.png';
-    this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon, 'yo');
+    const icon = './assets/imgs/default.png';
+    this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon, 'yo', '');
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
@@ -83,7 +83,7 @@ export class MapSucursalPage {
     this.load.dismiss();
   }
 
-  private createMarker(lat: number, lng: number, icon: string, nombre: string) {
+  private createMarker(lat: number, lng: number, icon: string, nombre: string, direccion:string) {
     const options = {
       position: {
         lat: lat,
@@ -95,10 +95,11 @@ export class MapSucursalPage {
       zIndex: Math.round(lat * -100000)
     };
     const marker = new google.maps.Marker(options);
-    const contentString = '<div> <b>' + nombre + '</b> </div>';
+    const contentString = '<div> <b>' + nombre + '</b>' +
+    '<p>' + direccion + '</p></div>';
     marker.addListener('click', () => {
       this.infowindow.setContent(contentString);
-      this.infowindow.open(this.map, marker);
+      this.infowindow.open(this.map, marker); 
     });
     return marker;
   }
@@ -110,9 +111,9 @@ export class MapSucursalPage {
         this.sucursales.forEach(sucursal => {
           console.log(sucursal);
           const icon = './assets/imgs/sucursal.png';
-          sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+          sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
           this.fixBounds(sucursal.latitude, sucursal.longitude);
-          this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name);
+          this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
           this.listSucursal.push({
             name: sucursal.name,
             image: sucursal.image,
@@ -121,7 +122,6 @@ export class MapSucursalPage {
             latitude: sucursal.latitude,
             longitude: sucursal.longitude,
             idSucursal: sucursal.idSucursal,
-            direccion: sucursal.direccion,
             color: 'primary'
           });
         });
@@ -130,14 +130,19 @@ export class MapSucursalPage {
   }
 
   clickSucursal(sucursal) {
+    console.log("sucursal entro")
     if (sucursal) {
       this.itemSelected = sucursal;
     }
-    google.maps.event.trigger(sucursal.marker, 'click');
+    google.maps.event.trigger(sucursal.marker, 'click') ;
   }
 
   showOrder() {
     this.navCtrl.push('LinesPage');
+  }
+
+  showList() {
+    this.navCtrl.push('ListSucursalPage');
   }
 
   showSucursal(sucursal) {
@@ -158,11 +163,8 @@ export class MapSucursalPage {
       if (value) {
         this.sucursalID = value;
         this.listSucursal.forEach(data => {
-          console.log(data);
           if (data.idSucursal === this.sucursalID) {
-            this.itemSelected = data;
-            console.log(this.itemSelected);
-            google.maps.event.trigger(data.marker, 'click');
+            this.clickSucursal(data);
           }
         })
       }

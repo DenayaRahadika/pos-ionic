@@ -1,0 +1,28 @@
+page-list-sucursal {
+  ion-content {
+    p {
+      text-align: center;
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+  
+  div.item-detail{
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      z-index: 2;
+      border-top: 5px solid color($colors, dark);
+      background-color: white;
+      h5{
+        margin: 0px;
+        font-size: 1.5rem;
+      }
+      p{
+        font-size: 12px;
+      }
+  }
+}
