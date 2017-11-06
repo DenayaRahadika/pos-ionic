@@ -72,6 +72,7 @@ export class ProductsPage {
         {
           name: 'count',
           type: 'number',
+          min: '0',
           value: this.productSelected.count
         }
       ],
@@ -84,7 +85,9 @@ export class ProductsPage {
     alert.present();
     alert.onDidDismiss((data) => {
       console.log(data);
+      if(data.count > 0) {
         this.productSelected.count = data.count;
+      }
     });
   }
 
@@ -93,7 +96,10 @@ export class ProductsPage {
   }
 
   remove() {
-    this.productSelected.count--;
+    if (this.productSelected.count > 0) {
+      this.productSelected.count--;
+
+    }
   }
 
   close() {
@@ -102,7 +108,18 @@ export class ProductsPage {
 
   addProduct() {
     this.showLoad = true;
-    this.productsOrder.push(this.productSelected);
+    if(this.productsOrder.length <= 0){
+      this.productsOrder.push(this.productSelected);
+    }else
+    {
+      this.productsOrder.forEach(data => {
+        if(data.code === this.productSelected.code){
+          //update
+        }else{
+          this.productsOrder.push(this.productSelected);
+        }
+      });
+    }
     this.showLoad = false;
     this.close();
     let toast = this.toasCtrl.create({
@@ -119,22 +136,22 @@ export class ProductsPage {
     modal.present();
   }
 
-  search(event: any){
-    if(event.target && event.target.value){
+  search(event: any) {
+    if (event.target && event.target.value) {
       let query = event.target.value.trim();
       console.log(query);
-       this.productShow = this.products.filter(item => {
+      this.productShow = this.products.filter(item => {
         return item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
       });
-    }else{
+    } else {
       this.productShow = this.products;
     }
   }
-  
-  detail(product){
+
+  detail(product) {
     console.log("detail");
     this.productSelected = Object.assign({}, product);
-    this.navCtrl.push('ProductPage',{
+    this.navCtrl.push('ProductPage', {
       product: product
     });
   }

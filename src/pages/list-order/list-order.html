@@ -16,6 +16,8 @@
 </ion-header>
 
 <ion-content>
+
+    <p class="center"><b>Feria CBA FEICOBOL</b></p>
     <ion-card>
         <ion-list>
           <ion-item *ngIf="orders.length == 0">
@@ -25,13 +27,32 @@
             <ion-thumbnail item-left>
               <img [src]="order.image">
             </ion-thumbnail>
-            <h2>{{order.name}}</h2>
-            <p>Precio: <b>{{ order.precio}} bs. </b> </p> 
-            <p>Cantidad: <b> {{order.count}} </b> </p>  
-            <p> <b>Bs.{{order.count * order.precio}} </b></p>
+            <h2>{{ order.name }}</h2>
+            <p>Precio: <b>{{ order.precio }} bs. </b> </p> 
+            <p>Cantidad: <b>{{ order.count }} </b> </p>  
+            <p> <b>Bs.{{ order.count * order.precio }} </b></p>
           </ion-item>
         </ion-list>
       </ion-card>
+
+      <p class="center"><b>SARCO CBA</b></p>
+      <ion-card>
+          <ion-list>
+            <ion-item *ngIf="orders.length == 0">
+              No hay productos agregados
+            </ion-item>
+            <ion-item *ngFor="let order of orders; let i = index ">
+              <ion-thumbnail item-left>
+                <img [src]="order.image">
+              </ion-thumbnail>
+              <h2>{{ order.name }}</h2>
+              <p>Precio: <b>{{ order.precio }} bs. </b> </p> 
+              <p>Cantidad: <b> {{ order.count }} </b> </p>  
+              <p> <b>Bs.{{ order.count * order.precio }} </b></p>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+
 </ion-content>
 <ion-footer padding>
     <button block ion-button color="primary" (click)="addOrder()">

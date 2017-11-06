@@ -68,6 +68,7 @@ export class OrderPage {
 
   private getProducts(){
       let total = 0;
+      
       this.products.forEach((item)=>{
         total+= item.precio * item.count
         console.log(item);
