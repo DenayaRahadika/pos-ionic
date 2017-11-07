@@ -113,13 +113,17 @@ export class ProductsPage {
     }else
     {
       this.productsOrder.forEach(data => {
+        console.log('order', this.productsOrder)
         if(data.code === this.productSelected.code){
+          console.log('dat code', data.code);
+          console.log('product select', this.productSelected.code);
           //update
         }else{
           this.productsOrder.push(this.productSelected);
         }
       });
     }
+    // this.productsOrder.push(this.productSelected);
     this.showLoad = false;
     this.close();
     let toast = this.toasCtrl.create({
@@ -128,6 +132,7 @@ export class ProductsPage {
     });
     toast.present();
   }
+
 
   showOrder() {
     let modal = this.modalCtrl.create('OrderPage', {
@@ -148,7 +153,7 @@ export class ProductsPage {
     }
   }
 
-  detail(product) {
+  detailProduct(product) {
     console.log("detail");
     this.productSelected = Object.assign({}, product);
     this.navCtrl.push('ProductPage', {
