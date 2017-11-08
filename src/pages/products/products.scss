@@ -11,7 +11,8 @@ page-products {
               .product-cover{
                 padding: 5px;
                 display: block;
-                height: 340px;
+                height: 315px;
+                color: black;
                 .cover{
                   position: relative;
                   height: 130px;
@@ -31,18 +32,22 @@ page-products {
                     left: 50%;
                     transform: translateX(-50%);
                   }
-                  img{
+
+                  img {
                     max-height: 130px;
+                    padding: 5px;
                   }
-                  h6{
+
+                  h6 {
                     color: color($colors, dark);
                     font-size: 1.5rem;
                   }
+
                   p{
-                    padding: 0px;
-                    max-height: 10px;
-                    margin-top: -10px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
                   }
+
                   ion-icon{
                   opacity: 0;
                   position: absolute;
@@ -62,7 +67,9 @@ page-products {
                 &.selected{
                   // box-shadow: 0px 0px 0px 2px color($colors, royal);
                   box-shadow: 1px 0px 10px 3px  color($colors, dark);
-                  max-width: fit-content;
+                  width: 60%;
+                  margin-left: auto;
+                  margin-right: auto;
                   ion-icon{
                     opacity: 1;
                   }
@@ -80,7 +87,7 @@ page-products {
               &:nth-child(even) {
                 .product-cover{
                   border:1px solid #ccc;
-                  border-width: 0px 0px .5px .5px;
+                  border-width: 0px 1px .5px .5px;
                 }
               }
             }

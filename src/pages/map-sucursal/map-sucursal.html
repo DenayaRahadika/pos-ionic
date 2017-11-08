@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar color="primary">
-      <ion-buttons left>
-          <button ion-button icon-only menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-        </ion-buttons>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title class="title">Map</ion-title>
     <ion-buttons right>
-        <button ion-button icon-only (click)="presentPopover($event)">
-            <ion-icon name="options"></ion-icon>
-          </button>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="options"></ion-icon>
+      </button>
       <button ion-button icon-only (click)="showList()">
         <ion-icon name="md-paper"></ion-icon>
       </button>
@@ -25,24 +25,24 @@
 </ion-content>
 
 <div class="item-detail" *ngIf="itemSelected !== null">
-    <ion-row align-items-center>
-        <ion-col col-4>
-            <button color="secondary" ion-button block icon-only (click)="showSucursal()">
-              <ion-icon name="eye"></ion-icon>
-            </button>
-            <p text-center>Ver Sucursal</p>
-          </ion-col>
-      <ion-col col-4>
-        <button color="primary" ion-button block icon-only (click)="showOrder()">
-          <ion-icon name="md-clipboard"></ion-icon>
-        </button>
-        <p text-center>Hacer Pedido</p>
-      </ion-col>
-      <ion-col col-4>
-        <button color="royal" ion-button block color="danger" icon-only (click)="closeOptions()">
-          <ion-icon name="close"></ion-icon>
-        </button>
-        <p text-center>Cerrar</p>
-      </ion-col>
-    </ion-row>
-  </div>
+  <ion-row align-items-center>
+    <ion-col col-4>
+      <button color="secondary" ion-button block icon-only (click)="showSucursal()">
+        <ion-icon name="eye"></ion-icon>
+      </button>
+      <p text-center>Ver Sucursal</p>
+    </ion-col>
+    <ion-col col-4>
+      <button color="primary" ion-button block icon-only (click)="showOrder()">
+        <ion-icon name="md-clipboard"></ion-icon>
+      </button>
+      <p text-center>Hacer Pedido</p>
+    </ion-col>
+    <ion-col col-4>
+      <button color="royal" ion-button block color="danger" icon-only (click)="closeOptions()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <p text-center>Cerrar</p>
+    </ion-col>
+  </ion-row>
+</div>

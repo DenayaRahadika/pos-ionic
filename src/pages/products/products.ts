@@ -123,7 +123,6 @@ export class ProductsPage {
         }
       });
     }
-    // this.productsOrder.push(this.productSelected);
     this.showLoad = false;
     this.close();
     let toast = this.toasCtrl.create({
@@ -132,7 +131,6 @@ export class ProductsPage {
     });
     toast.present();
   }
-
 
   showOrder() {
     let modal = this.modalCtrl.create('OrderPage', {
