@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    
+    <ion-title>NOTICIAS</ion-title>
     <ion-buttons left>
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -12,43 +12,45 @@
       <!-- <ion-badge *ngIf="productsOrder.length != 0" item-end class="badge" >{{ productsOrder.length }}</ion-badge> -->
     </button>
     </ion-buttons>
-    <!-- assets/imgs/F01119_200.jpg -->
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-slides pager autoplay="4000">
-      <ion-slide>
-        <ion-card (click)="verSlide()">
-          <img src="http://www.heladospil.com.bo/wp-content/uploads/2016/09/helados_promo.jpg" />
-          <ion-card-content>
-            <h5><b> PROMO HELADO </b></h5>
-            <p>
-              Participa y gana con los helados de PIl <br>
-              GANA UNA DE LAS 50 HELADERAS DE PIL
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="http://www.pilandina.com.bo/wp-content/uploads/2016/08/helaticones-pil-540x540.jpg" />
-          <ion-card-content>
-            <h5><b>APROVECHA EL SUPER COMBO 3x1 </b> </h5>
-          </ion-card-content>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="https://i.ytimg.com/vi/Xs37LVIhcc8/hqdefault.jpg" />
-          <ion-card-content>
-            <h5> <b>LIMPIA TUS 10 CODIGOS DE BARRA </b></h5>
-            <p>
-              ingresa tus codigos de barra y participa del sorteo para ganar fabulosos premios.
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-slide>
-    </ion-slides>
+    <ion-slide>
+      <h5><b> PROMO PIX HELADOS </b></h5>
+      <img src="http://www.pilandina.com.bo/wp-content/uploads/2017/09/promo-pixhelados.jpg" (click)="verSlide()" />
+      <p style="text-align:justify; margin-left: 50px; margin-right: 50px;">
+        Participa y gana con los helados de PIl <br> GANA UNA DE LAS 50 HELADERAS DE PIL <br> Podrán participar todas las
+        personas naturales que cuenten con un documento de identidad vigente.
+      </p>
+      <button small ion-button clear>
+        Ver mas...
+      </button>
+    </ion-slide>
+    <ion-slide>
+      <h5><b>APROVECHA EL SUPER COMBO 3x1 </b> </h5>
+      <img src="http://www.pilandina.com.bo/wp-content/uploads/2016/08/helaticones-pil-540x540.jpg" />
+      <p style="text-align:justify; margin-left: 50px; margin-right: 50px;">
+        Ingresa tus codigos de barra y participa del sorteo para ganar fabulosos premios. <br> Mecánica de la Modalidad Sorteo:
+        <br> Podrán participar todas las personas naturales que cuenten con un documento de identidad vigente.
+      </p>
+      <button small ion-button clear>
+          Ver mas...
+        </button>
+    </ion-slide>
+    <ion-slide>
+      <h5> <b>LIMPIA TUS 10 CODIGOS DE BARRA </b></h5>
+      <img src="https://i.ytimg.com/vi/Xs37LVIhcc8/hqdefault.jpg" />
+      <p style="text-align:justify; margin-left: 50px; margin-right: 50px;">
+        Ingresa tus codigos de barra y participa del sorteo para ganar fabulosos premios. <br> Mecánica de la Modalidad Sorteo:
+        <br> Podrán participar todas las personas naturales que cuenten con un documento de identidad vigente.
+      </p>
+      <button small ion-button clear>
+          Ver mas...
+        </button>
+
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>

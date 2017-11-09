@@ -25,7 +25,7 @@
         "image": "assets/imgs/F01092_200.jpg",
         "UBE": "20",
         "precio": 5,
-        "isOfert": true
+        "isOfert": false
       },
       {
         "code": "F01149",
@@ -41,7 +41,7 @@
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
         "precio": 4,
-        "isOfert": true
+        "isOfert": false
       },
       {
         "code": "F01099",
@@ -49,28 +49,31 @@
         "image": "assets/imgs/F01099_200.jpg",
         "UBE": "20",
         "precio": 5,
-        "isOfert": false
+        "isOfert": true
       },
       {
         "code": "F01119",
         "name": "LECHE P. VIDA ENRIQ. UHTX900 ML. (BOLSA)",
         "image": "assets/imgs/F01119_200.jpg",
         "UBE": "20",
-        "precio": 7
+        "precio": 7,
+        "isOfert": false
       },
       {
         "code": "F01120",
         "name": "LECHE PIL CREMOSA X 1 LT (CAJA)",
         "image": "assets/imgs/F01120_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": false
       },
       {
         "code": "F01595",
         "name": "LEP INST. PURA VIDAx350G (SACHET TRILAM)",
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": false
       },
       {
         "code": "F01152",
@@ -84,14 +87,16 @@
         "name": "LECHE PIL FRESCA NATURAL X 946 ML.",
         "image": "assets/imgs/F01002_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": false
       },
       {
         "code": "F01100",
         "name": "LECHE PIL CREMOSA UHT 1.1 L. 3% (BOLSA)",
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
-        "precio": 3
+        "precio": 3,
+        "isOfert": true
       }
     ]
   },
@@ -104,14 +109,16 @@
         "name": "LECHE CON CAFE X 800 ML.",
         "image": "assets/imgs/families/uht/F01144_200.jpg",
         "UBE": "20",
-        "precio": 3
+        "precio": 3,
+        "isOfert": false
       },
       {
         "code": "F01117",
         "name": "LECHE AVENA CHOCOLATE x 150 ML",
         "image": "assets/imgs/families/uht/F01144_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": true
       },
       {
         "code": "F01118",
