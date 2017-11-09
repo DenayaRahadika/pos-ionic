@@ -8,42 +8,48 @@
         "name": "LECHE P. VIDA ENRIQ. UHTX900 ML. (BOLSA)",
         "image": "assets/imgs/F01119_200.jpg",
         "precio": 5,
-        "UBE": "20"
+        "UBE": "20",
+        "isOfert": true
       },
       {
         "code": "532187",
         "name": "PACK LECHES UHTX3 UND (NATURAL + LIGHT)",
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
-        "precio": 6
+        "precio": 6,
+        "isOfert": false
       },
       {
         "code": "F01092",
         "name": "LECHE PIL UHT X 946 ML. P/PERSONAL",
         "image": "assets/imgs/F01092_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": true
       },
       {
         "code": "F01149",
         "name": "LECHE FRESCA UHT x 946 ML.(SOBOCE)",
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": false
       },
       {
         "code": "532188",
         "name": "PACK LECHES UHTX3 UND (NATURAL + DESLAC)",
         "image": "assets/imgs/F01100_200.jpg",
         "UBE": "20",
-        "precio": 4
+        "precio": 4,
+        "isOfert": true
       },
       {
         "code": "F01099",
         "name": "LECHE NATURAL PROLECHE UHT X 800 ML(BOL)",
         "image": "assets/imgs/F01099_200.jpg",
         "UBE": "20",
-        "precio": 5
+        "precio": 5,
+        "isOfert": false
       },
       {
         "code": "F01119",

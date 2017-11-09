@@ -107,23 +107,26 @@ export class ProductsPage {
   }
 
   addProduct() {
-    this.showLoad = true;
-    if(this.productsOrder.length <= 0){
+
+    let position = null;
+    this.productsOrder.forEach((data, index) => {
+      if(data.code === this.productSelected.code){
+        console.log('found en:', index);
+        //update
+        position = index;
+        return;
+      }
+    });
+    if (position === null) { // no lo encontro
+      console.log('creado');
       this.productsOrder.push(this.productSelected);
-    }else
-    {
-      this.productsOrder.forEach(data => {
-        console.log('order', this.productsOrder)
-        if(data.code === this.productSelected.code){
-          console.log('dat code', data.code);
-          console.log('product select', this.productSelected.code);
-          //update
-        }else{
-          this.productsOrder.push(this.productSelected);
-        }
-      });
+    }else {
+      console.log(position, 'actulizado');
+      this.productsOrder[position].count += this.productSelected.count;
     }
-    this.showLoad = false;
+
+    console.log(this.productsOrder);
+
     this.close();
     let toast = this.toasCtrl.create({
       message: 'Producto agregado',

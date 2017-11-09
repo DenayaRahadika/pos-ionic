@@ -8,6 +8,12 @@ page-products {
     }
       ion-grid{
           ion-col{
+            .product-cover.ofert{
+              background-image: url('./../assets/imgs/offer.png');
+              background-repeat: no-repeat;
+              background-position: right 10px;
+              background-size: 30px 30px;
+            }
               .product-cover{
                 padding: 5px;
                 display: block;
@@ -75,7 +81,7 @@ page-products {
                   }
                 }
               }
-                
+
           }
 
               &:nth-child(odd) {
@@ -92,7 +98,7 @@ page-products {
               }
             }
           }
-    
+
           .product-detail{
             position: fixed;
             bottom: 0px;
@@ -114,6 +120,6 @@ page-products {
               background-color: rgba(white, .8);
             }
           }
-    
-          
+
+
 }

@@ -14,7 +14,7 @@
   <ion-grid no-margin no-padding>
     <ion-row no-margin no-padding>
       <ion-col text-center col-6 *ngFor="let product of productShow" col-md-3>
-        <a class="product-cover">
+        <a class="product-cover" [class.ofert]="product.isOfert">
           <div class="cover" (click)="clickedProduct( product )" [class.selected]="getIsActive( product )" >
               <ion-icon name="checkmark-circle"></ion-icon>
             <img [src]="product.image" [alt]="product.name">
@@ -50,7 +50,7 @@
       <ion-row align-items-center no-margin no-padding>
         <ion-col no-padding>
           <button small block ion-button icon-only color="primary" (click)="remove()">
-            <ion-icon name="remove"></ion-icon> 
+            <ion-icon name="remove"></ion-icon>
           </button>
         </ion-col>
         <ion-col text-center>
