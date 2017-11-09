@@ -73,8 +73,9 @@ export class MapSucursalPage {
       zoom: 8,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    const icon = './assets/imgs/default.png';
+    const icon = './assets/imgs/marker1.png';
     this.createMarker(this.myLatLng.lat, this.myLatLng.lng, icon, 'yo', '');
+    this.fixBounds(this.myLatLng.lat, this.myLatLng.lng);
 
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
@@ -112,7 +113,6 @@ export class MapSucursalPage {
           console.log(sucursal);
           const icon = './assets/imgs/sucursal.png';
           sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
-          this.fixBounds(sucursal.latitude, sucursal.longitude);
           this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
           this.listSucursal.push({
             name: sucursal.name,

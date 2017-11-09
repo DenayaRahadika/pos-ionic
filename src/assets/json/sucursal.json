@@ -8,7 +8,8 @@
         "longitude": -66.1312004,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/feria.png",
-        "ID_DEPTO": "260"
+        "ID_DEPTO": "260",
+        "status": true
     },
     {
         "idSucursal":"2",
@@ -41,7 +42,8 @@
         "longitude": -66.2567157,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
-        "ID_DEPTO": "260"
+        "ID_DEPTO": "260",
+        "status": true
     },
     {
         "idSucursal":"5",
@@ -52,7 +54,8 @@
         "longitude": -66.2567157,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
-        "ID_DEPTO": "260"
+        "ID_DEPTO": "260",
+        "status": true
     },
 
     {
@@ -64,7 +67,8 @@
         "longitude": -68.1325426,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
-        "ID_DEPTO": "268"
+        "ID_DEPTO": "268",
+        "status": false
     }
 ]
 

@@ -14,6 +14,7 @@ export class ListSucursalPage {
   listSucursal: any[] = [];
   itemSelected: any = null;
   sucursalID: string;
+  search: number;
 
   constructor(
     public navCtrl: NavController, 
@@ -32,8 +33,14 @@ export class ListSucursalPage {
   private getSucursal() {
     this.mapService.getData()
       .then(data => {
+        let colorSelec;
         this.sucursales = data;
         this.sucursales.forEach(sucursal => {
+          if(sucursal.status == true){
+            colorSelec = 'secondary';
+          }else{
+            colorSelec = 'primary';
+          }
           this.listSucursal.push({
             name: sucursal.name,
             image: sucursal.image,
@@ -44,7 +51,7 @@ export class ListSucursalPage {
             idSucursal: sucursal.idSucursal,
             direccion: sucursal.direccion,
             depto: sucursal.ID_DEPTO,
-            color: 'primary'
+            color: colorSelec
           });
         });
         console.log("list", this.listSucursal);
@@ -78,6 +85,9 @@ export class ListSucursalPage {
     modal.present();
   }
 
+  showSearch() {
+    this.search = 1;
+ }
   closeOptions() {
     this.itemSelected = null;
   }
