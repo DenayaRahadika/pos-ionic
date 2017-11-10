@@ -7,7 +7,7 @@
     </ion-buttons>
     <ion-title class="title">Mapa Sucursales</ion-title>
     <ion-buttons right>
-      <button ion-button icon-only (click)="presentPopover($event)">
+      <button ion-button icon-only (click)="presentPopoverDep($event)">
         <ion-icon name="options"></ion-icon>
       </button>
       <button ion-button icon-only (click)="showList()">
@@ -28,13 +28,13 @@
   <ion-toolbar color="primary">
     <ion-list class="mylist">
       <button ion-item (click)="presentPopover($event)">
-        Habilitada
+        Habilitadas
         <ion-badge item-end color="secondary">4</ion-badge>
       </button>
     </ion-list>
 
     <ion-list class="mylist2">
-      <button ion-item>
+      <button ion-item (click)="showList()">
         No Habilitadas
         <ion-badge item-end>20</ion-badge>
       </button>

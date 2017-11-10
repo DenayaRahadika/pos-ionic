@@ -107,7 +107,6 @@ export class ProductsPage {
   }
 
   addProduct() {
-
     let position = null;
     this.productsOrder.forEach((data, index) => {
       if(data.code === this.productSelected.code){
@@ -124,9 +123,7 @@ export class ProductsPage {
       console.log(position, 'actulizado');
       this.productsOrder[position].count += this.productSelected.count;
     }
-
     console.log(this.productsOrder);
-
     this.close();
     let toast = this.toasCtrl.create({
       message: 'Producto agregado',

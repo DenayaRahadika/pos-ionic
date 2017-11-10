@@ -102,6 +102,7 @@ export class MapSucursalPage {
       this.infowindow.setContent(contentString);
       this.infowindow.open(this.map, marker); 
     });
+
     return marker;
   }
 
@@ -110,8 +111,13 @@ export class MapSucursalPage {
       .then(data => {
         this.sucursales = data;
         this.sucursales.forEach(sucursal => {
-          console.log(sucursal);
-          const icon = './assets/imgs/sucursal.png';
+          console.log('sucursal', sucursal);
+          let icon;
+          if(sucursal.status == true){
+            icon = './assets/imgs/habilitado.png';
+          }else{
+            icon = './assets/imgs/sucursal.png';
+          }
           sucursal.marker = this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
           this.createMarker(sucursal.latitude, sucursal.longitude, icon, sucursal.name, sucursal.direccion);
           this.listSucursal.push({
@@ -151,6 +157,24 @@ export class MapSucursalPage {
       sucursal: this.itemSelected,
     });
     modal.present();
+  }
+
+  presentPopoverDep(myEvent) {
+    let popover = this.popoverCtrl.create('PopoverDepPage');
+    popover.present({
+      ev: myEvent
+    });
+    popover.onDidDismiss(value => {
+      console.log('popovover', value);
+      // if (value) {
+      //   this.sucursalID = value;
+      //   this.listSucursal.forEach(data => {
+      //     if (data.idSucursal === this.sucursalID) {
+      //       this.clickSucursal(data);
+      //     }
+      //   })
+      // }
+    });
   }
 
   presentPopover(myEvent) {

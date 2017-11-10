@@ -33,14 +33,8 @@ export class ListSucursalPage {
   private getSucursal() {
     this.mapService.getData()
       .then(data => {
-        let colorSelec;
         this.sucursales = data;
         this.sucursales.forEach(sucursal => {
-          if(sucursal.status == true){
-            colorSelec = 'secondary';
-          }else{
-            colorSelec = 'primary';
-          }
           this.listSucursal.push({
             name: sucursal.name,
             image: sucursal.image,
@@ -51,7 +45,7 @@ export class ListSucursalPage {
             idSucursal: sucursal.idSucursal,
             direccion: sucursal.direccion,
             depto: sucursal.ID_DEPTO,
-            color: colorSelec
+            color: 'primary'
           });
         });
         console.log("list", this.listSucursal);

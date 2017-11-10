@@ -20,7 +20,8 @@
         "longitude": -66.1835768,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
-        "ID_DEPTO": "260"
+        "ID_DEPTO": "260",
+        "status": true
     },
     {
         "idSucursal":"3",
@@ -31,7 +32,8 @@
         "longitude": -66.1597232,
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/junin.png",
-        "ID_DEPTO": "260"
+        "ID_DEPTO": "260",
+        "status": false
     },
     {
         "idSucursal":"4",
@@ -43,7 +45,7 @@
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
         "ID_DEPTO": "260",
-        "status": true
+        "status": false
     },
     {
         "idSucursal":"5",
@@ -68,7 +70,7 @@
         "telefono": "443-30-23-50",
         "image": "assets/imgs/sucursal/sarco.png",
         "ID_DEPTO": "268",
-        "status": false
+        "status": true
     }
 ]
 

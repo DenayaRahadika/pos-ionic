@@ -26,7 +26,7 @@ page-home {
       .swiper-slide{
         align-items: baseline;
         .crop-image{
-          height: 65%;
+          height: 60%;
           width: 100%;
           position: absolute;
           img{
@@ -37,10 +37,14 @@ page-home {
           }
         }
         .info{
-          height: 35%;
+          height: 0%;
           width: 100%;
+          top: 67%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           position: absolute;
           bottom: 0px;
+          display: block;
         }
       }
 
