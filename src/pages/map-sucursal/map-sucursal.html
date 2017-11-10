@@ -2,7 +2,7 @@
   <ion-navbar color="primary">
     <ion-buttons left>
       <button ion-button icon-only menuToggle>
-          <ion-icon name="menu"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title class="title">Mapa Sucursales</ion-title>
@@ -25,22 +25,22 @@
 </ion-content>
 
 <ion-footer>
-    <ion-toolbar color="primary">
-      <ion-list class="mylist">
-          <ion-item>
-            <p>Habilitadas</p>
-            <ion-badge item-end color="secondary">4</ion-badge>
-          </ion-item>
-        </ion-list>
-        
-        <ion-list class="mylist2">
-            <ion-item>
-              <p>No Habilitadas </p>
-              <ion-badge item-end>20</ion-badge>
-            </ion-item>
-          </ion-list>
-    </ion-toolbar>
-  </ion-footer>
+  <ion-toolbar color="primary">
+    <ion-list class="mylist">
+      <button ion-item (click)="presentPopover($event)">
+        Habilitada
+        <ion-badge item-end color="secondary">4</ion-badge>
+      </button>
+    </ion-list>
+
+    <ion-list class="mylist2">
+      <button ion-item>
+        No Habilitadas
+        <ion-badge item-end>20</ion-badge>
+      </button>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>
 
 <div class="item-detail" *ngIf="itemSelected !== null">
   <ion-row align-items-center>

@@ -17,7 +17,7 @@ export class ListSucursalPage {
   search: number;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private mapService: MapService,
     private modalCtrl: ModalController
@@ -62,8 +62,8 @@ export class ListSucursalPage {
     this.mapService.getDepto()
     .then(data=>{
       console.log('depto', data);
-      data.forEach(element => {
-      });
+      // data.forEach(element => {
+      // });
     })
   }
 
