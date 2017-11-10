@@ -1,25 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class MapService {
 
   constructor(
-    public http: Http
+    public http: HttpClient
   ) {
     console.log('Hello MapProvider Provider');
   }
 
   getData(){
     return this.http.get('assets/json/sucursal.json')
-    .map(response => response.json())
     .toPromise();
   }
 
   getDepto(){
     return this.http.get('assets/json/depto.json')
-    .map(response => response.json())
     .toPromise();
   }
 

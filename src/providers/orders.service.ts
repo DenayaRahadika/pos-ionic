@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
 
 import { AngularFireDatabase, AngularFireList  } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
@@ -28,9 +26,9 @@ export class OrdersService {
   addOrder(orders){
     this.orderListRef.push(orders);
   }
-    
+
   getOrderProducts(id){
     return this.fireDatabase.list('/orders/'+ id + '/products');
   }
-  
+
 }

@@ -13,7 +13,7 @@ import { ClientsService } from '../providers/clients.service';
 import { OrdersService } from '../providers/orders.service';
 import { MapService } from '../providers/map.service';
 
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthProvider } from '../providers/auth.service';
 
 import { AngularFireModule } from 'angularfire2';
@@ -38,7 +38,7 @@ const configFirebase = {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicStorageModule.forRoot({
       name: '__mydb',
          driverOrder: ['indexeddb', 'sqlite', 'websql']
