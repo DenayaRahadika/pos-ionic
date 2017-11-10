@@ -5,7 +5,7 @@
           <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title class="title">Map</ion-title>
+    <ion-title class="title">Mapa Sucursales</ion-title>
     <ion-buttons right>
       <button ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="options"></ion-icon>
@@ -23,6 +23,24 @@
   <ion-scroll scrollY="true" class="scroll">
   </ion-scroll>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="primary">
+      <ion-list class="mylist">
+          <ion-item>
+            <p>Habilitadas</p>
+            <ion-badge item-end color="secondary">4</ion-badge>
+          </ion-item>
+        </ion-list>
+        
+        <ion-list class="mylist2">
+            <ion-item>
+              <p>No Habilitadas </p>
+              <ion-badge item-end>20</ion-badge>
+            </ion-item>
+          </ion-list>
+    </ion-toolbar>
+  </ion-footer>
 
 <div class="item-detail" *ngIf="itemSelected !== null">
   <ion-row align-items-center>

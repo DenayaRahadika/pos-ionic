@@ -2,34 +2,17 @@ page-home {
     .title {
         text-align: center;
     }
+
     .badge-md {
         border-radius: 10px;
         color: #fff;
         margin-top: -25px;
-        // margin-right: -5px;
-        // margin-left: -8px;
         background-color: red;
     }
 
-    ion-content{
-        text-align: center; 
-        ion-card {
-            position: relative;
-            text-align: center;
-            height: auto;
-            img{
-                width: 100px;
-                position: inherit;
-                margin-left: auto;
-                margin-top: 10px;
-                margin-right: auto;
-                display: block;
-              }
-          }
-    }
-
     ion-slides{
-        background-color: #DAE5EA;
+        background-color: white;
+        // margin-top: -8em;
         .swiper-pagination-bullet{
           background-color: #494949 ;
           opacity: 1;
@@ -41,11 +24,13 @@ page-home {
       }
 
       .swiper-slide img {
-        text-align: center;
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 100%;
+        width: 250px;
         height: 300px;
+        position: inherit;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: -10px;
     }
 }

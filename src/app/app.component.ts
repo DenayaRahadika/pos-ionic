@@ -28,7 +28,7 @@ export class MyApp {
       },
       { 
         title: 'Realizar Pedido', 
-        icon: 'md-clipboard', 
+        icon: 'map', 
         component: 'MapSucursalPage' 
       },
       { 

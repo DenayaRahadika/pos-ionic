@@ -1,4 +1,7 @@
 page-products {
+  .body{
+    background-color: white;
+  }
     .badge-md {
         border-radius: 10px;
         color: #fff;
@@ -9,10 +12,10 @@ page-products {
       ion-grid{
           ion-col{
             .product-cover.ofert{
-              background-image: url('./../assets/imgs/offer.png');
+              background-image: url('./../assets/imgs/promo.jpg');
               background-repeat: no-repeat;
-              background-position: right 10px;
-              background-size: 30px 30px;
+              background-position: 165px 10px;
+              background-size: 50px 50px;
             }
               .product-cover{
                 padding: 5px;
