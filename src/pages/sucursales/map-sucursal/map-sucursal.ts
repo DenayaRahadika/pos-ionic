@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, Loading, LoadingController, ModalC
 
 import { Geolocation } from '@ionic-native/geolocation';
 
-import { MapService } from '../../providers/map.service';
+import { MapService } from '../../../providers/map.service';
 
 declare var google;
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
-import { MapService } from '../../providers/map.service';
+import { MapService } from '../../../providers/map.service';
 
 @IonicPage()
 @Component({
